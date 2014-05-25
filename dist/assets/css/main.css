@@ -1,0 +1,60 @@
+.reveal,
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+/* BASELINE
+|--------------------------------------------------------------------------
+|
+| Units of measurement guidelines:
+|
+| PIXELS        : hairline borders, css shadows,
+| EM            : media queries, typography, elements related to typography like margins
+| REM           : don't use, no IE8 support     (ideally, would use rems for type, with em fallbacks)
+| PERCENTAGE    : base resets, responsive images, layout, containers    (you do not know where your module is going on a page, so you don't know its absolute size)
+| RAW           : line-heights, border-image    (unitless, so the line height is a multiple of the current element's font-size)
+|
+*/
+/* FONT IMPORTS
+|--------------------------------------------------------------------------
+*/
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/proximanova-regular-webfont.eot?#iefix");
+  src: url("../fonts/proximanova-regular-webfont.eot?#iefix") format("eot"), url("../fonts/proximanova-regular-webfont.woff") format("woff"), url("../fonts/proximanova-regular-webfont.ttf") format("truetype"), url("../fonts/proximanova-regular-webfont.svg#proximanova-regular-webfont") format("svg");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/proximanova-bold-webfont.eot?#iefix");
+  src: url("../fonts/proximanova-bold-webfont.eot?#iefix") format("eot"), url("../fonts/proximanova-bold-webfont.woff") format("woff"), url("../fonts/proximanova-bold-webfont.ttf") format("truetype"), url("../fonts/proximanova-bold-webfont.svg#proximanova-bold-webfont") format("svg");
+}
+/*
+ * This file is reserved for your global style rules.
+ */
+html {
+  height: 100%;
+  font-family: 'Proxima Nova', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 16px;
+  fill: currentColor;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
