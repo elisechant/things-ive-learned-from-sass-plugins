@@ -1,6 +1,6 @@
 {
   "name": "things-ive-learned-from-sass-plugins",
- "description": "Design patterns, tricks and takeaways from our best Sass Developers.",
+  "description": "Design patterns, tricks and takeaways from our best Sass Developers.",
   "version": "0.1.0",
   "homepage": "https://github.com/elisechant/things-ive-learned-from-sass-plugins",
   "author": {
@@ -28,20 +28,10 @@
     "grunt-contrib-watch": "~0.6.1",
     "load-grunt-tasks": "~0.4.0",
     "time-grunt": "~0.3.1",
-    "assemble-contrib-sitemap": "*"
+    "assemble-contrib-sitemap": "*",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-autoprefixer": "~0.7.3",
+    "grunt-contrib-copy": "~0.5.0"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/elisechant/things-ive-learned-from-sass-plugins/blob/master/LICENSE-MIT"
-    }
-  ],
-  "keywords": [
-    "assemble",
-    "templates",
-    "handlebars",
-    "site generator",
-    "site builder",
-    "grunt"
-  ]
+  "keywords": []
 }

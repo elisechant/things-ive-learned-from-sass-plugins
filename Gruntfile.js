@@ -1,35 +1,32 @@
-/*
- * Generated on 2014-05-24
- * generator-assemble v0.4.11
- * https://github.com/assemble/generator-assemble
- *
- * Copyright (c) 2014 Hariadi Hinta
- * Licensed under the MIT license.
- */
-
 'use strict';
 
 // # Globbing
 // for performance reasons we're only matching one level down:
-// '<%= config.src %>/templates/pages/{,*/}*.hbs'
+// '<%= config.dir.src %>/templates/pages/{,*/}*.hbs'
 // use this if you want to match all subfolders:
-// '<%= config.src %>/templates/pages/**/*.hbs'
+// '<%= config.dir.src %>/templates/pages/**/*.hbs'
 
 module.exports = function (grunt) {
 
 	require('time-grunt')(grunt);
+	require('load-grunt-tasks')(grunt);
+
+	grunt.loadNpmTasks('assemble');
 
 	// Project configuration.
 	grunt.initConfig({
 
 		config: {
-			src: 'src',
-			dist: 'dist'
+			dir: {
+				src: 'src',
+				dist: 'dist',
+				bower: 'bower_components'	
+			}
 		},
 
 		watch: {
 			assemble: {
-				files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
+				files: ['<%= config.dir.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
 				tasks: ['assemble']
 			},
 			livereload: {
@@ -37,10 +34,10 @@ module.exports = function (grunt) {
 					livereload: '<%= connect.options.livereload %>'
 				},
 				files: [
-					'<%= config.dist %>/{,*/}*.html',
-					'<%= config.dist %>/assets/{,*/}*.css',
-					'<%= config.dist %>/assets/{,*/}*.js',
-					'<%= config.dist %>/assets/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+					'<%= config.dir.dist %>/{,*/}*.html',
+					'<%= config.dir.dist %>/assets/{,*/}*.css',
+					'<%= config.dir.dist %>/assets/{,*/}*.js',
+					'<%= config.dir.dist %>/assets/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
 				]
 			}
 		},
@@ -56,7 +53,7 @@ module.exports = function (grunt) {
 				options: {
 					open: true,
 					base: [
-						'<%= config.dist %>'
+						'<%= config.dir.dist %>'
 					]
 				}
 			}
@@ -66,41 +63,86 @@ module.exports = function (grunt) {
 			pages: {
 				options: {
 					flatten: true,
-					assets: '<%= config.dist %>/assets',
-					layout: '<%= config.src %>/templates/layouts/default.hbs',
-					data: '<%= config.src %>/data/*.{json,yml}',
-					partials: '<%= config.src %>/templates/partials/*.hbs',
+					assets: '<%= config.dir.dist %>/assets',
+					layout: '<%= config.dir.src %>/templates/layouts/default.hbs',
+					data: '<%= config.dir.src %>/data/*.{json,yml}',
+					partials: '<%= config.dir.src %>/templates/partials/*.hbs',
 					plugins: ['assemble-contrib-sitemap'],
 				},
 				files: {
-					'<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
+					'<%= config.dir.dist %>/': ['<%= config.dir.src %>/templates/pages/*.hbs']
 				}
 			}
 		},
 
 		// Before generating any new files,
 		// remove any previously-created files.
-		clean: ['<%= config.dist %>/**/*.{html,xml}']
+		clean: {
+			dev: ['.sass-cache'],
+			dist: ['<%= config.dir.dist %>/**/*.{html,xml}']
+		},
+
+
+		sass: {
+			static: {
+				options: {
+					style: 'compact'
+				},
+				files: {
+					'<%= config.dir.dist %>/assets/css/main.css': '<%= config.dir.src %>/stylesheets/styles.scss',
+				}
+			}
+		},
+
+
+		autoprefixer: {
+			options: {
+				browsers: ['last 1 version']
+			},
+			static: {
+				src: '<%= config.dir.dist %>/assets/css/*.css'
+			}
+		},
+
+
+		copy: {
+			js: {
+				files: [
+					{
+						expand: false,
+						flatten: true,
+						src: '<%= config.dir.bower %>/jquery/dist/jquery.js',
+						dest: '<%= config.dir.dist %>/assets/js/libs/jquery.js'
+					}
+				]
+			},
+		},
 
 	});
 
-	grunt.loadNpmTasks('assemble');
-	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-contrib-watch');
+
+	/**
+	 * Tasks
+	 */
+
+	grunt.registerTask('flush', ['clean']);
+
+	grunt.registerTask('build', [
+		'flush',
+		'assemble',
+		'autoprefixer',
+		'sass',
+		'copy',
+	]);
 
 	grunt.registerTask('server', [
-		'clean',
-		'assemble',
+		'build',
 		'connect:livereload',
 		'watch'
 	]);
 
-	grunt.registerTask('build', [
-		'clean',
-		'assemble'
-	]);
 
+	// default
 	grunt.registerTask('default', [
 		'build'
 	]);
