@@ -79,15 +79,15 @@ module.exports = function (grunt) {
 		},
 
 		assemble: {
+			options: {
+				flatten: true,
+				assets: '<%= config.dir.dist %>/assets',
+				layout: '<%= config.dir.src %>/templates/layouts/default.hbs',
+				data: '<%= config.dir.src %>/data/*.{json,yml}',
+				partials: '<%= config.dir.src %>/templates/partials/*.hbs',
+				plugins: ['assemble-contrib-sitemap'],
+			},
 			pages: {
-				options: {
-					flatten: true,
-					assets: '<%= config.dir.dist %>/assets',
-					layout: '<%= config.dir.src %>/templates/layouts/default.hbs',
-					data: '<%= config.dir.src %>/data/*.{json,yml}',
-					partials: '<%= config.dir.src %>/templates/partials/*.hbs',
-					plugins: ['assemble-contrib-sitemap'],
-				},
 				files: {
 					'<%= config.dir.dist %>/': ['<%= config.dir.src %>/templates/pages/*.hbs']
 				}
