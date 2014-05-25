@@ -1,0 +1,65 @@
+//$FONT_PATH: "./assets/fonts/";
+$FONT_PATH: "../fonts/";
+
+//<a href="assets/fonts/proximanova-bold-webfont.eot">font</a>
+
+
+
+
+/* BASELINE
+|--------------------------------------------------------------------------
+|
+| Units of measurement guidelines:
+|
+| PIXELS        : hairline borders, css shadows,
+| EM            : media queries, typography, elements related to typography like margins
+| REM           : don't use, no IE8 support     (ideally, would use rems for type, with em fallbacks)
+| PERCENTAGE    : base resets, responsive images, layout, containers    (you do not know where your module is going on a page, so you don't know its absolute size)
+| RAW           : line-heights, border-image    (unitless, so the line height is a multiple of the current element's font-size)
+|
+*/
+
+$BASELINE:              24px;
+
+$BASE_FONT_SIZE:        16px;
+$BASE_PERCENTAGE:       100%;
+
+
+$TRANSITION_SPEED:      200ms;
+$OPACITY_INDEX:         .6;
+$TRANSITION_INDEX:      15%;
+
+$RGBA_TRANSITION_INDEX: .8;
+
+
+
+/* FONT IMPORTS
+|--------------------------------------------------------------------------
+*/
+
+
+
+$PROXIMA_NOVA_REGULAR: 'proximanova-regular-webfont';
+$PROXIMA_NOVA_BOLD: 'proximanova-bold-webfont';
+
+@font-face{
+	font-family: "Proxima Nova";
+	font-weight: normal;
+	font-style: normal;
+	src: url("#{$FONT_PATH + $PROXIMA_NOVA_REGULAR}.eot?#iefix");
+	src: url("#{$FONT_PATH + $PROXIMA_NOVA_REGULAR}.eot?#iefix") format("eot"),
+		url("#{$FONT_PATH + $PROXIMA_NOVA_REGULAR}.woff") format("woff"),
+		url("#{$FONT_PATH + $PROXIMA_NOVA_REGULAR}.ttf") format("truetype"),
+		url("#{$FONT_PATH + $PROXIMA_NOVA_REGULAR}.svg##{$PROXIMA_NOVA_REGULAR}") format("svg");
+}
+
+@font-face{
+	font-family: "Proxima Nova";
+	font-weight: bold;
+	font-style: normal;
+	src: url("#{$FONT_PATH + $PROXIMA_NOVA_BOLD}.eot?#iefix");
+	src: url("#{$FONT_PATH + $PROXIMA_NOVA_BOLD}.eot?#iefix") format("eot"),
+		url("#{$FONT_PATH + $PROXIMA_NOVA_BOLD}.woff") format("woff"),
+		url("#{$FONT_PATH + $PROXIMA_NOVA_BOLD}.ttf") format("truetype"),
+		url("#{$FONT_PATH + $PROXIMA_NOVA_BOLD}.svg##{$PROXIMA_NOVA_BOLD}") format("svg");
+}

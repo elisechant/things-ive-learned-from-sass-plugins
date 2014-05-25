@@ -1,0 +1,9 @@
+@mixin scrollX {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+@mixin scrollY {
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}

@@ -38,13 +38,13 @@ module.exports = function (grunt) {
 			},
 			sass: {
 				files: [
-					'<%= config.dir.src %>/scss/**/*.{scss}',
+					'<%= config.dir.src %>/stylesheets/**/*.scss',
 				],
 				tasks: ['sass', 'autoprefixer']
 			},
 			js: {
 				files: [
-					'<%= config.dir.src %>/js/**/*.js',
+					'<%= config.dir.src %>/scripts/**/*.js',
 				],
 				tasks: ['concat']
 			},
@@ -105,7 +105,7 @@ module.exports = function (grunt) {
 		sass: {
 			static: {
 				options: {
-					style: 'compact'
+					style: 'expanded'
 				},
 				files: {
 					'<%= config.dir.dist %>/assets/css/main.css': '<%= config.dir.src %>/stylesheets/styles.scss',
@@ -149,10 +149,30 @@ module.exports = function (grunt) {
 							'plugin/**/*',
 							'css/**/*',
 						],
-						dest: '<%= config.dir.dist %>/reveal'
+						dest: '<%= config.dir.dist %>/'
 					}
 				]
 			},
+			images: {
+				files: [
+					{
+						expand: true,
+						flatten: true,
+						src: '<%= config.dir.src %>/images/*.{jpg,png,webp,gif}',
+						dest: '<%= config.dir.dist %>/assets/images/'
+					}
+				]
+			},
+			fonts: {
+				files: [
+					{
+						expand: true,
+						flatten: true,
+						src: '<%= config.dir.src %>/fonts/*.{eot,svg,ttf,woff}',
+						dest: '<%= config.dir.dist %>/assets/fonts/'
+					}
+				]
+			}
 		},
 
 

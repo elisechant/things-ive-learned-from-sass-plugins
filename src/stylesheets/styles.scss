@@ -11,5 +11,11 @@
 //@import 'vendor/revealjs/source/moon.scss';
 //@import 'vendor/revealjs/source/solarized.scss';
 //@import 'vendor/revealjs/source/blood.scss';
-//
-//
+
+
+@import
+	'resets-reveal'
+	, 'helpers'
+	, 'config'
+	, 'base'
+;
