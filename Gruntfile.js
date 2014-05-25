@@ -17,11 +17,15 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 
 		config: {
+			pkg: grunt.file.readJSON('package.json'),
 			dir: {
 				src: 'src',
 				dist: 'dist',
 				bower: 'bower_components'	
-			}
+			},
+			banner: '/*! <%= config.pkg.title || config.pkg.name %> ' +
+				'<%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %>' +
+				'* Copyright (c) <%= grunt.template.today("yyyy") %> <%= config.pkg.author.name %>; */\n\n',
 		},
 
 		watch: {
@@ -79,7 +83,7 @@ module.exports = function (grunt) {
 		// remove any previously-created files.
 		clean: {
 			dev: ['.sass-cache'],
-			dist: ['<%= config.dir.dist %>/**/*.{html,xml}']
+			dist: ['<%= config.dir.dist %>/**/*.{html,xml,js,css}']
 		},
 
 
@@ -105,18 +109,41 @@ module.exports = function (grunt) {
 		},
 
 
-		copy: {
-			js: {
-				files: [
-					{
-						expand: false,
-						flatten: true,
-						src: '<%= config.dir.bower %>/jquery/dist/jquery.js',
-						dest: '<%= config.dir.dist %>/assets/js/libs/jquery.js'
-					}
-				]
+//		copy: {
+//			js: {
+//				files: [
+//					{
+//						expand: false,
+//						flatten: true,
+//						src: [
+//
+//						],
+//						dest: '<%= config.dir.dist %>/assets/js/libs/SP.libs.js'
+//					}
+//				]
+//			},
+//		},
+
+
+		concat: {
+			options: {
+				banner: '<%= config.banner %>',
+				separator: ';\n'
 			},
-		},
+			libs: {
+				src: [
+					'<%= config.dir.bower %>/jquery/dist/jquery.min.js',
+					'<%= config.dir.bower %>/reveal.js/js/reveal.min.js',
+				],
+				dest: '<%= config.dir.dist %>/assets/js/SP.libs.js',
+			},
+			main: {
+				src: [
+					'<%= config.dir.src %>/scripts/SP.slides.js',
+				],
+				dest: '<%= config.dir.dist %>/assets/js/SP.main.js',
+			}
+		}
 
 	});
 
@@ -130,9 +157,9 @@ module.exports = function (grunt) {
 	grunt.registerTask('build', [
 		'flush',
 		'assemble',
-		'autoprefixer',
 		'sass',
-		'copy',
+		'autoprefixer',
+		'concat',
 	]);
 
 	grunt.registerTask('server', [
