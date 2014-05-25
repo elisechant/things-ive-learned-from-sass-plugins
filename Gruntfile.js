@@ -13,7 +13,10 @@ module.exports = function (grunt) {
 
 	grunt.loadNpmTasks('assemble');
 
-	// Project configuration.
+
+	/**
+	 * Project configuration
+	 */
 	grunt.initConfig({
 
 		config: {
@@ -32,6 +35,18 @@ module.exports = function (grunt) {
 			assemble: {
 				files: ['<%= config.dir.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
 				tasks: ['assemble']
+			},
+			sass: {
+				files: [
+					'<%= config.dir.src %>/scss/**/*.{scss}',
+				],
+				tasks: ['sass', 'autoprefixer']
+			},
+			js: {
+				files: [
+					'<%= config.dir.src %>/js/**/*.js',
+				],
+				tasks: ['concat']
 			},
 			livereload: {
 				options: {
@@ -83,7 +98,7 @@ module.exports = function (grunt) {
 		// remove any previously-created files.
 		clean: {
 			dev: ['.sass-cache'],
-			dist: ['<%= config.dir.dist %>/**/*.{html,xml,js,css}']
+			dist: ['<%= config.dir.dist %>/**/*']
 		},
 
 
@@ -109,20 +124,36 @@ module.exports = function (grunt) {
 		},
 
 
-//		copy: {
-//			js: {
+		copy: {
+//			reveal_scss: {
 //				files: [
 //					{
-//						expand: false,
-//						flatten: true,
+//						expand: true,
+//						flatten: false,
+//						cwd: '<%= config.dir.bower %>/reveal.js/css/theme/',
 //						src: [
-//
+//							'**/*.scss',
 //						],
-//						dest: '<%= config.dir.dist %>/assets/js/libs/SP.libs.js'
+//						dest: '<%= config.dir.src %>/stylesheets/vendor/revealjs/'
 //					}
 //				]
 //			},
-//		},
+			reveal_deps: {
+				files: [
+					{
+						expand: true,
+						flatten: false,
+						cwd: '<%= config.dir.bower %>/reveal.js/',
+						src: [
+							'lib/**/*',
+							'plugin/**/*',
+							'css/**/*',
+						],
+						dest: '<%= config.dir.dist %>/reveal'
+					}
+				]
+			},
+		},
 
 
 		concat: {
@@ -133,6 +164,7 @@ module.exports = function (grunt) {
 			libs: {
 				src: [
 					'<%= config.dir.bower %>/jquery/dist/jquery.min.js',
+					'<%= config.dir.bower %>/headjs/dist/1.0.0/head.min.js',
 					'<%= config.dir.bower %>/reveal.js/js/reveal.min.js',
 				],
 				dest: '<%= config.dir.dist %>/assets/js/SP.libs.js',
@@ -157,6 +189,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('build', [
 		'flush',
 		'assemble',
+		'copy',
 		'sass',
 		'autoprefixer',
 		'concat',
