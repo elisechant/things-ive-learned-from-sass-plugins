@@ -1,13 +1,3 @@
-.reveal,
-.reveal h1,
-.reveal h2,
-.reveal h3,
-.reveal h4,
-.reveal h5,
-.reveal h6 {
-  font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-
 /* BASELINE
 |--------------------------------------------------------------------------
 |
@@ -27,22 +17,36 @@
   font-family: "Proxima Nova";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/proximanova-regular-webfont.eot?#iefix");
-  src: url("../fonts/proximanova-regular-webfont.eot?#iefix") format("eot"), url("../fonts/proximanova-regular-webfont.woff") format("woff"), url("../fonts/proximanova-regular-webfont.ttf") format("truetype"), url("../fonts/proximanova-regular-webfont.svg#proximanova-regular-webfont") format("svg");
+  src: url("../fonts/proximanova-regular-webfont.eot");
+  src: url("../fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-regular-webfont.woff") format("woff"), url("../fonts/proximanova-regular-webfont.ttf") format("truetype"), url("../fonts/proximanova-regular-webfont.svg#proximanova-regular-webfont") format("svg");
 }
 @font-face {
   font-family: "Proxima Nova";
   font-weight: bold;
   font-style: normal;
-  src: url("../fonts/proximanova-bold-webfont.eot?#iefix");
-  src: url("../fonts/proximanova-bold-webfont.eot?#iefix") format("eot"), url("../fonts/proximanova-bold-webfont.woff") format("woff"), url("../fonts/proximanova-bold-webfont.ttf") format("truetype"), url("../fonts/proximanova-bold-webfont.svg#proximanova-bold-webfont") format("svg");
+  src: url("../fonts/proximanova-bold-webfont.eot");
+  src: url("../fonts/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-bold-webfont.woff") format("woff"), url("../fonts/proximanova-bold-webfont.ttf") format("truetype"), url("../fonts/proximanova-bold-webfont.svg#proximanova-bold-webfont") format("svg");
+}
+@font-face {
+  font-family: "Avenir Medium";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/Avenir 65 W01 Medium.eot");
+  src: url("../fonts/Avenir 65 W01 Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir 65 W01 Medium.woff") format("woff"), url("../fonts/Avenir 65 W01 Medium.ttf") format("truetype"), url("../fonts/Avenir 65 W01 Medium.svg#Avenir 65 W01 Medium") format("svg");
+}
+@font-face {
+  font-family: "Avenir Black";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/Avenir 95 W01 Black.eot");
+  src: url("../fonts/Avenir 95 W01 Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir 95 W01 Black.woff") format("woff"), url("../fonts/Avenir 95 W01 Black.ttf") format("truetype"), url("../fonts/Avenir 95 W01 Black.svg#Avenir 95 W01 Black") format("svg");
 }
 /*
  * This file is reserved for your global style rules.
  */
 html {
   height: 100%;
-  font-family: 'Proxima Nova', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Gotham Light', 'Proxima Nova', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 16px;
   fill: currentColor;
 }

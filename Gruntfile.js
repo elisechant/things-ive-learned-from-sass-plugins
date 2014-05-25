@@ -103,7 +103,15 @@ module.exports = function (grunt) {
 
 
 		sass: {
-			static: {
+			reveal: {
+				options: {
+					style: 'compressed'
+				},
+				files: {
+					'<%= config.dir.dist %>/assets/css/reveal-theme.css': '<%= config.dir.src %>/stylesheets/vendor/reveal-theme.scss',
+				}
+			},
+			main: {
 				options: {
 					style: 'expanded'
 				},
@@ -125,6 +133,7 @@ module.exports = function (grunt) {
 
 
 		copy: {
+			// don't overwrite accidently
 //			reveal_scss: {
 //				files: [
 //					{
@@ -134,7 +143,7 @@ module.exports = function (grunt) {
 //						src: [
 //							'**/*.scss',
 //						],
-//						dest: '<%= config.dir.src %>/stylesheets/vendor/revealjs/'
+//						dest: '<%= config.dir.src %>/stylesheets/vendor/reveal/'
 //					}
 //				]
 //			},
@@ -219,7 +228,9 @@ module.exports = function (grunt) {
 	grunt.registerTask('build', [
 		'flush',
 		'assemble',
-		'copy',
+		'copy:reveal_deps',
+		'copy:images',
+		'copy:fonts',
 		'sass',
 		'autoprefixer',
 		'concat',

@@ -42,24 +42,38 @@ $RGBA_TRANSITION_INDEX: .8;
 $PROXIMA_NOVA_REGULAR: 'proximanova-regular-webfont';
 $PROXIMA_NOVA_BOLD: 'proximanova-bold-webfont';
 
-@font-face{
-	font-family: "Proxima Nova";
-	font-weight: normal;
-	font-style: normal;
-	src: url("#{$FONT_PATH + $PROXIMA_NOVA_REGULAR}.eot?#iefix");
-	src: url("#{$FONT_PATH + $PROXIMA_NOVA_REGULAR}.eot?#iefix") format("eot"),
-		url("#{$FONT_PATH + $PROXIMA_NOVA_REGULAR}.woff") format("woff"),
-		url("#{$FONT_PATH + $PROXIMA_NOVA_REGULAR}.ttf") format("truetype"),
-		url("#{$FONT_PATH + $PROXIMA_NOVA_REGULAR}.svg##{$PROXIMA_NOVA_REGULAR}") format("svg");
-}
+$AVENIR_MEDIUM: 'Avenir 65 W01 Medium';
+$AVENIR_BLACK: 'Avenir 95 W01 Black';
 
-@font-face{
-	font-family: "Proxima Nova";
-	font-weight: bold;
-	font-style: normal;
-	src: url("#{$FONT_PATH + $PROXIMA_NOVA_BOLD}.eot?#iefix");
-	src: url("#{$FONT_PATH + $PROXIMA_NOVA_BOLD}.eot?#iefix") format("eot"),
-		url("#{$FONT_PATH + $PROXIMA_NOVA_BOLD}.woff") format("woff"),
-		url("#{$FONT_PATH + $PROXIMA_NOVA_BOLD}.ttf") format("truetype"),
-		url("#{$FONT_PATH + $PROXIMA_NOVA_BOLD}.svg##{$PROXIMA_NOVA_BOLD}") format("svg");
-}
+
+@include font-face(
+		$font-family: 'Proxima Nova',
+		$font-path: $FONT_PATH,
+		$font-name: $PROXIMA_NOVA_REGULAR,
+		$weight: normal,
+		$style: normal
+);
+
+@include font-face(
+	$font-family: 'Proxima Nova',
+	$font-path: $FONT_PATH,
+	$font-name: $PROXIMA_NOVA_BOLD,
+	$weight: bold,
+	$style: normal
+);
+
+@include font-face(
+	$font-family: 'Avenir Medium',
+	$font-path: $FONT_PATH,
+	$font-name: $AVENIR_MEDIUM,
+	$weight: bold,
+	$style: normal
+);
+
+@include font-face(
+	$font-family: 'Avenir Black',
+	$font-path: $FONT_PATH,
+	$font-name: $AVENIR_BLACK,
+	$weight: bold,
+	$style: normal
+);
