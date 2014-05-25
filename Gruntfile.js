@@ -175,6 +175,16 @@ module.exports = function (grunt) {
 				],
 				dest: '<%= config.dir.dist %>/assets/js/SP.main.js',
 			}
+		},
+
+
+		'gh-pages': {
+			options: {
+				base: 'dist',
+				repo: 'https://github.com/elisechant/things-ive-learned-from-sass-plugins.git',
+				message: 'Auto-generated commit',
+			},
+			src: ['**']
 		}
 
 	});
@@ -199,6 +209,10 @@ module.exports = function (grunt) {
 		'build',
 		'connect:livereload',
 		'watch'
+	]);
+
+	grunt.registerTask('deploy', [
+		'gh-pages',
 	]);
 
 
