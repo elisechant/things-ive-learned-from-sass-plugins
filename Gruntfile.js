@@ -167,7 +167,7 @@ module.exports = function (grunt) {
 					{
 						expand: true,
 						flatten: true,
-						src: '<%= config.dir.src %>/images/*.{jpg,png,webp,gif}',
+						src: '<%= config.dir.src %>/images/**/*.{jpg,png,webp,gif}',
 						dest: '<%= config.dir.dist %>/assets/images/'
 					}
 				]
@@ -200,6 +200,7 @@ module.exports = function (grunt) {
 			},
 			main: {
 				src: [
+					'<%= config.dir.src %>/scripts/SP.global.js',
 					'<%= config.dir.src %>/scripts/SP.slides.js',
 				],
 				dest: '<%= config.dir.dist %>/assets/js/SP.main.js',
