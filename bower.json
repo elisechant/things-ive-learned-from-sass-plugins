@@ -1,5 +1,5 @@
 {
-  "name": "sydcss-things-ive-learned-from-sass-plugins",
+  "name": "things-ive-learned-from-sass-plugins",
   "version": "0.0.0",
   "authors": [
     "elisechant <elise.chant@gmail.com>"
@@ -12,5 +12,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.1"
+  }
 }
