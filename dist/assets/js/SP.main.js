@@ -1,4 +1,4 @@
-/*! things-ive-learned-from-sass-plugins Sunday, May 25th, 2014, 4:45:14 PM* Copyright (c) 2014 elisechant; */
+/*! things-ive-learned-from-sass-plugins Wednesday, May 28th, 2014, 5:17:45 PM* Copyright (c) 2014 elisechant; */
 
 var SP = SP || (window.SP = {});
 
@@ -27,6 +27,9 @@ var SP = SP || (window.SP = {});
 
 			if (window && window.Reveal) {
 				Reveal.initialize({
+//					width: '100%',
+//					height: 700,
+
 					controls: true,
 					progress: true,
 					history: true,
