@@ -84,7 +84,7 @@ module.exports = function (grunt) {
 				assets: '<%= config.dir.dist %>/assets',
 				layout: '<%= config.dir.src %>/templates/layouts/default.hbs',
 				data: '<%= config.dir.src %>/data/*.{json,yml}',
-				partials: '<%= config.dir.src %>/templates/partials/*.hbs',
+				partials: '<%= config.dir.src %>/templates/slides/*.hbs',
 				plugins: ['assemble-contrib-sitemap'],
 			},
 			pages: {
