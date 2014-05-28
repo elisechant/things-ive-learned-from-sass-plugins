@@ -25,6 +25,9 @@ var SP = SP || (window.SP = {});
 
 			if (window && window.Reveal) {
 				Reveal.initialize({
+//					width: '100%',
+//					height: 700,
+
 					controls: true,
 					progress: true,
 					history: true,

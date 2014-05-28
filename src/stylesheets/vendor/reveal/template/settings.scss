@@ -6,8 +6,8 @@ $backgroundColor: #2b2b2b;
 
 // Primary/body text
 $mainFont: 'Gotham Light', 'Proxima Nova', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-$mainFontSize: 16px;
-$mainColor: #eee;
+$mainFontSize: 16px !default;
+$mainColor: #eee !default;
 
 // Headings
 $headingMargin: 0 0 20px 0;
