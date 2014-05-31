@@ -37,8 +37,6 @@ $RGBA_TRANSITION_INDEX: .8;
 |--------------------------------------------------------------------------
 */
 
-
-
 $PROXIMA_NOVA_REGULAR: 'proximanova-regular-webfont';
 $PROXIMA_NOVA_BOLD: 'proximanova-bold-webfont';
 
@@ -77,3 +75,52 @@ $AVENIR_BLACK: 'Avenir 95 W01 Black';
 	$weight: bold,
 	$style: normal
 );
+
+
+/* COLORS
+|--------------------------------------------------------------------------
+*/
+
+// Color palette
+
+// Start official Solarized colors
+// https://github.com/altercation/vim-colors-solarized
+$BASE03:    #002B36;
+$BASE02:    #073642;
+$BASE01:    #586E75;
+$BASE00:    #657B83;
+$BASE0:     #839496;
+$BASE1:     #93A1A1;
+$BASE2:     #EEE8D5;
+$BASE3:     #FDF6E3;
+$YELLOW:    #B58900;
+$ORANGE:    #CB4B16;
+$RED:       #DC322F;
+$MAGENTA:   #D33682;
+$VIOLET:    #6C71C4;
+$BLUE:      #268BD2;
+$CYAN:      #2AA198;
+$GREEN:     #859900;
+
+$BRBLACK:   #1C1C1C;
+$BLACK:     #262626;
+$BRGREEN:   #4E4E4E;
+$BRYELLOW:  #585858;
+$BRBLUE:    #808080;
+$BRCYAN:    #8A8A8A;
+$WHITE:     #D7D7AF;
+$BRWHITE:   #FFFFD7;
+$YELLOW:    #AF8700;
+$BRRED:     #D75F00;
+$RED:       #D70000;
+$MAGENTA:   #AF005F;
+$BRMAGENTA: #5F5FAF;
+$BLUE:      #0087FF;
+$CYAN:      #00AFAF;
+$GREEN:     #5F8700;
+// end Solarized
+
+
+// Semantic palette
+
+$body-bg:   $BASE02 !default;
