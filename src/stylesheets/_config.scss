@@ -53,26 +53,26 @@ $AVENIR_BLACK: 'Avenir 95 W01 Black';
 );
 
 @include font-face(
-	$font-family: 'Proxima Nova',
+	$font-family: 'Proxima Nova Bold',
 	$font-path: $FONT_PATH,
 	$font-name: $PROXIMA_NOVA_BOLD,
-	$weight: bold,
+	$weight: normal,
 	$style: normal
 );
 
 @include font-face(
-	$font-family: 'Avenir Medium',
+	$font-family: 'Avenir',
 	$font-path: $FONT_PATH,
 	$font-name: $AVENIR_MEDIUM,
-	$weight: bold,
+	$weight: normal,
 	$style: normal
 );
 
 @include font-face(
-	$font-family: 'Avenir Black',
+	$font-family: 'Avenir Bold',
 	$font-path: $FONT_PATH,
 	$font-name: $AVENIR_BLACK,
-	$weight: bold,
+	$weight: normal,
 	$style: normal
 );
 
@@ -120,6 +120,7 @@ $CYAN:      #00AFAF;
 $GREEN:     #5F8700;
 // end Solarized
 
+$solarized-grey-text:  $BASE1;
 
 // Semantic palette
 

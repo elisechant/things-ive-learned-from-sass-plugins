@@ -48,6 +48,12 @@ module.exports = function (grunt) {
 				],
 				tasks: ['concat']
 			},
+			img: {
+				files: [
+					'<%= config.dir.src %>/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
+				],
+				tasks: ['copy:images']
+			},
 			livereload: {
 				options: {
 					livereload: '<%= connect.options.livereload %>'
