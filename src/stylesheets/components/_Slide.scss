@@ -3,6 +3,9 @@
 //	font-size: 4em;
 //
 //	zoom: 1 !important;
+	img {
+		max-width: 100%;
+	}
 
 	border: 1px solid red;
 
@@ -15,6 +18,7 @@
 		font-family: "Avenir Bold";
 		line-height: 1.2;
 		margin-bottom: 0;
+		text-align: center;
 	}
 
 	h1 {
@@ -55,15 +59,17 @@
 }
 
 
+.light-and-shade,
 .before-and-after {
 	img {
 		width: 100%;
-		max-width: 100%;
 	}
 
 	position: relative;
 	height: 300px;
 
+	.light,
+	.shade,
 	.before,
 	.after {
 		position: absolute;
@@ -78,6 +84,88 @@
 	.after {
 		z-index: 1;
 	}
+
+	.light {
+		left: 0;
+		right: 50%;
+		padding-right: .5em;
+	}
+
+	.shade {
+		left: 50%;
+		right: 0;
+		padding-left: .5em;
+	}
 }
 
+
+.stacked-pair {
+	position: relative;
+	height: 480px;
+	border: 1px solid red;
+
+	
+	%snippets {
+		position: absolute;
+		width: 90%;
+		max-width: 90%;
+	}
+	
+	.mine {
+		@extend %snippets;
+		top: 0;
+		left: 0;
+		text-align: left;
+	}
+	
+	%theirs {
+		@extend %snippets;
+		bottom: 0;
+		right: 0;
+		text-align: right;
+
+		img {
+			position: relative;
+		}
+
+		&:before {
+			position: absolute;
+			right: 16px;
+			height: 24px;
+			top: -24px;
+			padding: 2px 6px;
+			color: white;
+		}
+	}
+	
+	.bootstrap,
+	.foundation,
+	.inuit {
+		@extend %theirs;
+	}
+
+	.foundation {
+		&:before {
+			content: 'Foundation';
+			background: $foundation-primary;
+			color: white;
+		}
+
+		img {
+			border: 4px solid $foundation-primary;
+		}
+	}
+
+	.bootstrap {
+		&:before {
+			content: 'Foundation';
+			background: $foundation-primary;
+			color: white;
+		}
+
+		img {
+			border: 4px solid $foundation-primary;
+		}
+	}
+}
 
