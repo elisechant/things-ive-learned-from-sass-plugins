@@ -126,6 +126,7 @@
 
 		img {
 			position: relative;
+			border: 4px solid;
 		}
 
 		&:before {
@@ -148,23 +149,32 @@
 		&:before {
 			content: 'Foundation';
 			background: $foundation-primary;
-			color: white;
 		}
 
 		img {
-			border: 4px solid $foundation-primary;
+			border-color: $foundation-primary;
 		}
 	}
 
 	.bootstrap {
 		&:before {
-			content: 'Foundation';
-			background: $foundation-primary;
-			color: white;
+			content: 'Bootstrap';
+			background: $bootstrap-primary;
 		}
 
 		img {
-			border: 4px solid $foundation-primary;
+			border-color: $bootstrap-primary;
+		}
+	}
+
+	.inuit {
+		&:before {
+			content: 'inuit.css';
+			background: $inuit-primary;
+		}
+
+		img {
+			border-color: $inuit-primary;
 		}
 	}
 }
