@@ -21,26 +21,29 @@
   src: url("../fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-regular-webfont.woff") format("woff"), url("../fonts/proximanova-regular-webfont.ttf") format("truetype"), url("../fonts/proximanova-regular-webfont.svg#proximanova-regular-webfont") format("svg");
 }
 @font-face {
-  font-family: "Proxima Nova";
-  font-weight: bold;
+  font-family: "Proxima Nova Bold";
+  font-weight: normal;
   font-style: normal;
   src: url("../fonts/proximanova-bold-webfont.eot");
   src: url("../fonts/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-bold-webfont.woff") format("woff"), url("../fonts/proximanova-bold-webfont.ttf") format("truetype"), url("../fonts/proximanova-bold-webfont.svg#proximanova-bold-webfont") format("svg");
 }
 @font-face {
-  font-family: "Avenir Medium";
-  font-weight: bold;
+  font-family: "Avenir";
+  font-weight: normal;
   font-style: normal;
   src: url("../fonts/Avenir 65 W01 Medium.eot");
   src: url("../fonts/Avenir 65 W01 Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir 65 W01 Medium.woff") format("woff"), url("../fonts/Avenir 65 W01 Medium.ttf") format("truetype"), url("../fonts/Avenir 65 W01 Medium.svg#Avenir 65 W01 Medium") format("svg");
 }
 @font-face {
-  font-family: "Avenir Black";
-  font-weight: bold;
+  font-family: "Avenir Bold";
+  font-weight: normal;
   font-style: normal;
   src: url("../fonts/Avenir 95 W01 Black.eot");
   src: url("../fonts/Avenir 95 W01 Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir 95 W01 Black.woff") format("woff"), url("../fonts/Avenir 95 W01 Black.ttf") format("truetype"), url("../fonts/Avenir 95 W01 Black.svg#Avenir 95 W01 Black") format("svg");
 }
+/* COLORS
+|--------------------------------------------------------------------------
+*/
 /*
  * This file is reserved for your global style rules.
  */
@@ -54,6 +57,7 @@ html {
 body {
   height: 100%;
   margin: 0;
+  background: #252530;
 }
 
 * {
@@ -63,6 +67,62 @@ body {
   user-select: none;
 }
 
-.slides {
+.slide {
   border: 1px solid red;
+}
+.slide .jumbo-text {
+  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 120px;
+  letter-spacing: 1px;
+  font-family: "Avenir Bold";
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+.slide h1 {
+  font-size: 40px;
+  color: white;
+  text-align: left;
+  font-family: "Avenir";
+  margin-bottom: 1em;
+}
+.slide .row {
+  display: table;
+}
+.slide .col {
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 1em;
+}
+.slide .col:last-of-type {
+  padding-right: 0;
+}
+
+.progress {
+  height: 5px;
+}
+.progress span {
+  background-color: #93a1a1;
+}
+
+.before-and-after {
+  position: relative;
+  height: 300px;
+}
+.before-and-after img {
+  width: 100%;
+  max-width: 100%;
+}
+.before-and-after .before,
+.before-and-after .after {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.before-and-after .before {
+  z-index: 2;
+}
+.before-and-after .after {
+  z-index: 1;
 }

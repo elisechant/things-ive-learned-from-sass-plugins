@@ -1,6 +1,4 @@
-
-
-.slides {
+.slide {
 //	font-size: 40px;
 //	font-size: 4em;
 //
@@ -8,8 +6,73 @@
 
 	border: 1px solid red;
 
-	h1 {
+	.jumbo-text {
+		color: white;
+		text-transform: uppercase;
+		font-weight: normal;
+		font-size: 120px;
+		letter-spacing: 1px;
+		font-family: "Avenir Bold";
+		line-height: 1.2;
+		margin-bottom: 0;
+	}
 
+	h1 {
+		font-size: 40px;
+		color: white;
+		text-align: left;
+		font-family: "Avenir";
+		margin-bottom: 1em;
+	}
+
+
+	.row {
+		display: table;
+	}
+
+	.col {
+		display: table-cell;
+		vertical-align: top;
+		padding-right: 1em;
+
+		&:last-of-type {
+			padding-right: 0;
+		}
+	}
+}
+
+
+.progress {
+	height: 5px;
+
+	span {
+		background-color: $solarized-grey-text;
+	}
+}
+
+
+.before-and-after {
+	img {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	position: relative;
+	height: 300px;
+
+	.before,
+	.after {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.before {
+		z-index: 2;
+	}
+
+	.after {
+		z-index: 1;
 	}
 }
 
