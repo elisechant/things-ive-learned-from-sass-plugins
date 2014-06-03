@@ -111,44 +111,7 @@
 		}
 	}
 	
-	.bootstrap,
-	.foundation,
-	.inuit {
-		@extend %theirs;
-	}
 
-	.foundation {
-		&:before {
-			content: 'Foundation';
-			background: $foundation-primary;
-		}
-
-		img {
-			border-color: $foundation-primary;
-		}
-	}
-
-	.bootstrap {
-		&:before {
-			content: 'Bootstrap';
-			background: $bootstrap-primary;
-		}
-
-		img {
-			border-color: $bootstrap-primary;
-		}
-	}
-
-	.inuit {
-		&:before {
-			content: 'inuit.css';
-			background: $inuit-primary;
-		}
-
-		img {
-			border-color: $inuit-primary;
-		}
-	}
 }
 
 

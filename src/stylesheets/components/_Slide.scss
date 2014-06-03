@@ -36,6 +36,82 @@
 }
 
 
+.bootstrap,
+.foundation,
+.inuit,
+.toolkit,
+.compass {
+	position: relative;
+	&:before {
+		position: absolute;
+		right: 16px;
+		height: 24px;
+		top: -24px;
+		padding: 2px 6px;
+		color: white;
+	}
+
+	img {
+		border: 4px solid;
+	}
+}
+
+.foundation {
+	&:before {
+		content: 'Foundation';
+		background: $foundation-primary;
+	}
+
+	img {
+		border-color: $foundation-primary;
+	}
+}
+
+.bootstrap {
+	&:before {
+		content: 'Bootstrap';
+		background: $bootstrap-primary;
+	}
+
+	img {
+		border-color: $bootstrap-primary;
+	}
+}
+
+.inuit {
+	&:before {
+		content: 'inuit.css';
+		background: $inuit-primary;
+	}
+
+	img {
+		border-color: $inuit-primary;
+	}
+}
+
+.toolkit {
+	&:before {
+		content: 'Toolkit';
+		background: $toolkit-primary;
+	}
+
+	img {
+		border-color: $toolkit-primary;
+	}
+}
+
+.compass {
+	&:before {
+		content: 'Compass';
+		background: $compass-primary;
+	}
+
+	img {
+		border-color: $compass-primary;
+	}
+}
+
+
 
 .mine-and-theirs {
 	position: relative;
@@ -56,12 +132,13 @@
 	%theirs {
 		bottom: 0;
 		right: 0;
-
 	}
 
 	.inuit,
 	.bootstrap,
-	.foundation {
+	.foundation,
+	.compass,
+	.toolkit {
 		@extend %theirs;
 	}
 }
