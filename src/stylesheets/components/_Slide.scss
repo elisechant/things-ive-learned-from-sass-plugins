@@ -70,3 +70,20 @@
 	@extend .mine-and-theirs;
 	background: if($DEBUG, #000, null);
 }
+
+
+.side-by-side {
+	position: relative;
+
+	.side {
+
+	}
+
+	.side--right {
+//		@extend .side;
+		position: absolute;
+		top:0;
+		right:0;
+	}
+
+}
