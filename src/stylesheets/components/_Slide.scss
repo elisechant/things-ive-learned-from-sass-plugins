@@ -97,3 +97,15 @@
 		left: 0;
 	}
 }
+
+
+.each-columns {
+	display: table;
+
+	.each {
+		display: table-cell;
+		vertical-align: top;
+		padding: 0 .5em;
+	}
+
+}
