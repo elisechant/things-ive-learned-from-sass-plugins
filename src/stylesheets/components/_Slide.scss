@@ -19,6 +19,7 @@
 		text-align: left;
 		font-family: "Avenir";
 		margin-bottom: 1em;
+		text-shadow: 1px 1px 1px $black;
 
 		code {
 			color: $solarized-yellow-text;
@@ -35,23 +36,27 @@
 }
 
 
+
 .mine-and-theirs {
 	position: relative;
+	min-height: 460px;
 
 	.mine,
 	%theirs {
-
+		position: absolute;
+		border-bottom: 1px solid $black;
+		border-right: 1px solid $black;
 	}
 
 	.mine {
-
+		top: 0;
+		left: 0;
 	}
 
 	%theirs {
-		position: absolute;
 		bottom: 0;
 		right: 0;
-		border: 1px solid red;
+
 	}
 
 	.inuit,
@@ -61,6 +66,7 @@
 	}
 }
 
-.mine-and-theirs--vertical {
+.mine-and-theirs--diagonal {
 	@extend .mine-and-theirs;
+	background: if($DEBUG, #000, null);
 }

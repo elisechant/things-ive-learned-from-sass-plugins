@@ -1,3 +1,5 @@
+$DEBUG: false;
+
 //$FONT_PATH: "./assets/fonts/";
 $FONT_PATH: "../fonts/";
 
@@ -126,6 +128,8 @@ $solarized-yellow-text:  $YELLOW;
 // Semantic palette
 
 $body-bg:   $BASE02 !default;
+$black:     $BRBLACK !default;
+
 
 $foundation-primary: #008cba;
 $bootstrap-primary: #6f5499;
