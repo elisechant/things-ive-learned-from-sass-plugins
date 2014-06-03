@@ -40,7 +40,8 @@
 .foundation,
 .inuit,
 .toolkit,
-.compass {
+.compass,
+.caffeinated {
 	position: relative;
 	&:before {
 		position: absolute;
@@ -111,35 +112,38 @@
 	}
 }
 
+.caffeinated {
+	&:before {
+		content: 'Caffeinated Labs';
+		background: $caffeinatedlabs-primary;
+	}
+
+	img {
+		border-color: $caffeinatedlabs-primary;
+	}
+}
+
 
 
 .mine-and-theirs {
 	position: relative;
 	min-height: 460px;
 
-	.mine,
-	%theirs {
+	.first,
+	.second {
 		position: absolute;
 		border-bottom: 1px solid $black;
 		border-right: 1px solid $black;
 	}
 
-	.mine {
+	.first {
 		top: 0;
 		left: 0;
 	}
 
-	%theirs {
+	.second {
 		bottom: 0;
 		right: 0;
-	}
-
-	.inuit,
-	.bootstrap,
-	.foundation,
-	.compass,
-	.toolkit {
-		@extend %theirs;
 	}
 }
 

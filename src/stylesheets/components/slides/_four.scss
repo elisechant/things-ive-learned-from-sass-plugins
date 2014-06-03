@@ -1,5 +1,12 @@
 .four {
 	.each-on-top-of {
-		min-height: 530px;
+		min-height: 600px;
+
+		.each:last-of-type {
+			right: 3em;
+			bottom: -2em;
+			left: auto;
+			top: auto;
+		}
 	}
 }
