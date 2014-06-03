@@ -1,14 +1,7 @@
 .slide {
-//	font-size: 40px;
-//	font-size: 4em;
-//
-//	zoom: 1 !important;
 	img {
 		max-width: 100%;
 	}
-
-	border: 1px solid red;
-
 	.jumbo-text {
 		color: white;
 		text-transform: uppercase;
@@ -20,7 +13,6 @@
 		margin-bottom: 0;
 		text-align: center;
 	}
-
 	h1 {
 		font-size: 40px;
 		color: white;
@@ -32,23 +24,7 @@
 			color: $solarized-yellow-text;
 		}
 	}
-
-
-	.row {
-		display: table;
-	}
-
-	.col {
-		display: table-cell;
-		vertical-align: top;
-		padding-right: 1em;
-
-		&:last-of-type {
-			padding-right: 0;
-		}
-	}
 }
-
 
 .progress {
 	height: 5px;
@@ -59,130 +35,32 @@
 }
 
 
-.light-and-shade,
-.before-and-after {
-	img {
-		width: 100%;
-	}
-
+.mine-and-theirs {
 	position: relative;
-	height: 300px;
 
-	.light,
-	.shade,
-	.before,
-	.after {
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-
-	.before {
-		z-index: 2;
-	}
-
-	.after {
-		z-index: 1;
-	}
-
-	.light {
-		left: 0;
-		right: 50%;
-		padding-right: .5em;
-	}
-
-	.shade {
-		left: 50%;
-		right: 0;
-		padding-left: .5em;
-	}
-}
-
-
-.stacked-pair {
-	position: relative;
-	height: 480px;
-	border: 1px solid red;
-
-	
-	%snippets {
-		position: absolute;
-		width: 90%;
-		max-width: 90%;
-	}
-	
-	.mine {
-		@extend %snippets;
-		top: 0;
-		left: 0;
-		text-align: left;
-	}
-	
+	.mine,
 	%theirs {
-		@extend %snippets;
+
+	}
+
+	.mine {
+
+	}
+
+	%theirs {
+		position: absolute;
 		bottom: 0;
 		right: 0;
-		text-align: right;
-
-		img {
-			position: relative;
-			border: 4px solid;
-		}
-
-		&:before {
-			position: absolute;
-			right: 16px;
-			height: 24px;
-			top: -24px;
-			padding: 2px 6px;
-			color: white;
-		}
+		border: 1px solid red;
 	}
-	
+
+	.inuit,
 	.bootstrap,
-	.foundation,
-	.inuit {
+	.foundation {
 		@extend %theirs;
 	}
-
-	.foundation {
-		&:before {
-			content: 'Foundation';
-			background: $foundation-primary;
-		}
-
-		img {
-			border-color: $foundation-primary;
-		}
-	}
-
-	.bootstrap {
-		&:before {
-			content: 'Bootstrap';
-			background: $bootstrap-primary;
-		}
-
-		img {
-			border-color: $bootstrap-primary;
-		}
-	}
-
-	.inuit {
-		&:before {
-			content: 'inuit.css';
-			background: $inuit-primary;
-		}
-
-		img {
-			border-color: $inuit-primary;
-		}
-	}
 }
 
-
-.vertical-panels {
-	.panel {
-		margin-bottom: 2em;
-	}
+.mine-and-theirs--vertical {
+	@extend .mine-and-theirs;
 }
-
