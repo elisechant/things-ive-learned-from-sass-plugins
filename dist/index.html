@@ -28,8 +28,8 @@
 
 	<div class="reveal">
 	<div class="slides">
-		<section class="slide">
-			<h1 class="jumbo-text"><small>Things I've <br>Learned from</small><br>Sass Plugins</h1>
+		<section class="slide splash">
+			<h1 class="jumbo-text"><small><span class="sol-yellow">10</span> Things I've <br>Learned from</small><br>Sass Plugins</h1>
 
 <!--<img src="assets/images/compass-logo.png">-->
 <!--<img src="assets/images/bootstrap-logo.png">-->
@@ -39,81 +39,411 @@
 <!--<img src="assets/images/team-sass-logo.png">-->
 <!--<img src="assets/images/zurb-logo.png">-->
 
+
+<aside class="notes">
+	Thanks SydCSS for having me.<br>
+	Today I’d like to talk about Sass.<br>
+	In particular, I want to talk about some of the learnings that I’ve found useful from reading Framework Source code.
+</aside>
 		</section>
-		<section class="slide">
-			<h1>Chain import statements.</h1>
-<div class="stacked-pair">
+		<section class="slide intro">
+			<img src="assets/images/css-grumpy-cat.jpg" width="" height="">
+		</section>
+		<section class="slide eight">
+			<section>
+	<h1><span class="sol-yellow">1.</span> Grammar proof your selectors.</h1>
+</section>
+
+<section>
+	<h1 class="fragment" data-fragment-index="0">Grammar proof your selectors.</h1>
+
+	<div class="mine-and-theirs--diagonal">
+		<div class="first mine">
+			<img src="assets/images/eight-mine.jpg" width="850" height="304">
+		</div>
+
+		<div class="second inuit fragment" data-fragment-index="0">
+			<img src="assets/images/eight-inuit.jpg" width="638" height="286">
+		</div>
+	</div>
+</section>
+
+
+<aside class="notes">
+	We should all know the pain of debugging typos in selectors? This is something that happens a lot !<br>
+	So, when you’re writing selectors,<br>
+	<strong>Grammar proof your selectors !</strong>
+</aside>
+
+		</section>
+		<section class="slide one">
+			<section>
+	<h1><span class="sol-yellow">2.</span> Chain your import statements.</h1>
+</section>
+
+<section>
+	<h1 class="fragment" data-fragment-index="1">Chain your import statements.</h1>
+
+	<div class="mine-and-theirs--diagonal">
+		<div class="first ">
+			<div class="side-by-side">
+				<div class="side mine">
+					<img src="assets/images/one-mine.jpg" height="" width="">
+				</div>
+				<div class="side--right fragment" data-fragment-index="0">
+					<img src="assets/images/one-script-mine.jpg" height="" width="480">
+				</div>
+			</div>
+
+		</div>
+
+		<div class="second foundation fragment" data-fragment-index="1">
+			<img src="assets/images/one-foundation.jpg" height="" width="800">
+		</div>
+	</div>
+</section>
+
+
+<aside class="notes">
+	It’s less annoying, but something always feels wrong about repeating the @import directive. It feels much more natural to chain the import, like chaining JavaScript variables,<br>
+	well it turns out you can,<br>
+	<strong>Chain import statements !</strong>
+</aside>
+
+		</section>
+		<section class="slide four">
+			<section>
+	<h1><span class="sol-yellow">3.</span> Use objects for configs.</h1>
+</section>
+
+<section>
+	<h1 class="fragment" data-fragment-index="0">Use objects for configs.</h1>
+
+	<div class="each-on-top-of">
+		<div class="each mine">
+			<img src="assets/images/four-mine.jpg" height="" width="">
+		</div>
+
+		<div class="each toolkit fragment" data-fragment-index="0">
+			<img src="assets/images/four-toolkit.jpg" height="" width="720">
+		</div>
+	</div>
+
+
+	<aside class="notes">
+		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+	</aside>
+</section>
+
+<section>
+	<h1>Access the config object with getters and setters.</h1>
+
+	<div class="toolkit">
+		<img src="assets/images/four-2-config-item-toolkit.jpg" height="" width="">
+	</div>
+	<br>
+	<div class="toolkit">
+		<img src="assets/images/four-2-getters-toolkit.jpg" height="" width="">
+	</div>
+	<br>
+	<div class="toolkit">
+		<img src="assets/images/four-2-use-getter-toolkit.jpg" height="" width="">
+	</div>
+
+
+	<aside class="notes">
+		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+	</aside>
+</section>
+
+
+
+
+		</section>
+		<section class="slide sixteen">
+			<section>
+	<h1><span class="sol-yellow">4.</span> Use lots of Sass Partials.</h1>
+</section>
+
+<section>
+	<h1 class="fragment" data-fragment-index="5">Use lots of Sass Partials.</h1>
+
+	<div class="each-columns--random">
+
+		<div class="each foundation">
+			<img src="assets/images/sixteen-foundation.jpg" height="515" width="310">
+		</div>
+
+		<div class="each bootstrap fragment" data-fragment-index="1">
+			<img src="assets/images/sixteen-bootstrap.jpg" height="515" width="310">
+		</div>
+
+		<div class="each inuit fragment" data-fragment-index="2">
+			<img src="assets/images/sixteen-inuit.jpg" height="515" width="310">
+		</div>
+
+		<div class="each bourbon fragment" data-fragment-index="3">
+			<img src="assets/images/sixteen-bourbon.jpg" height="515" width="310">
+		</div>
+
+		<div class="each compass fragment" data-fragment-index="5">
+			<img src="assets/images/sixteen-compass.jpg" height="515" width="310">
+		</div>
+
+		<div class="each toolkit fragment" data-fragment-index="4">
+			<img src="assets/images/sixteen-toolkit.jpg" height="515" width="310">
+		</div>
+
+	</div>
+
+</section>
+
+<aside class="notes">
+	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+</aside>
+
+		</section>
+		<section class="slide five">
+			<section>
+	<h1><span class="sol-yellow">5.</span> Document inline.</h1>
+</section>
+
+
+<section>
 	<div class="mine">
-		<img src="assets/images/chain--mine.png" height="300" width="640">
+		<img src="assets/images/five-bad-comments-mine.jpg" width="" height="">
 	</div>
+	<br>
+	<br>
+	<div class="mine fragment" data-fragment-index="0">
+		<img src="assets/images/five-bad-comments-mixin-mine.jpg" width="" height="">
+	</div>
+	<br>
+	<br>
+	<div class="mine fragment" data-fragment-index="1">
+		<img src="assets/images/five-bad-comments-element-group-mine.jpg" width="" height="">
+	</div>
+</section>
+
+
+<section>
+	<div class="bootstrap">
+		<img src="assets/images/five-variables-bootstrap.jpg" width="" height="">
+	</div>
+</section>
+
+<section>
+	<div class="inuit">
+		<img src="assets/images/five-forms-inuit.jpg" width="" height="">
+	</div>
+</section>
+
+<section>
+	<div class="inuit">
+		<img src="assets/images/five-arrows-inuit.jpg" width="" height="">
+	</div>
+</section>
+
+<aside class="notes">
+
+</aside>
+
+		</section>
+		<section class="slide ten">
+			<section>
+	<h1><span class="sol-yellow">6.</span> Mixin libraries are cheap</h1>
+</section>
+
+<section>
+	<div class="bourbon">
+		<img src="assets/images/ten-bourbon.jpg" width="" height="">
+	</div>
+
+	<aside class="notes">
+		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+	</aside>
+</section>
+
+
+<section>
+	<h1>.. or optionally output CSS</h1>
+</section>
+
+
+<section>
 	<div class="foundation">
-		<img src="assets/images/chain--foundation.png" height="300" width="640">
+		<img src="assets/images/ten-foundation.jpg" width="" height="">
 	</div>
-</div>
-
-
-<aside class="notes">
-	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-</aside>
-
-		</section>
-		<section class="slide">
-			<section>
-	<h1>Check for empty arguments.</h1>
 
 	<aside class="notes">
 		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 	</aside>
+</section>
+
+		</section>
+		<section class="slide fourteen">
+			<section>
+	<h1><span class="sol-yellow">7.</span> Use a debug flag.</h1>
 </section>
 
 <section>
-	<h1>Predefine parameters with null.</h1>
+	<h1 class="fragment" data-fragment-index="0">Use a debug flag.</h1>
 
-	<aside class="notes">
-		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-	</aside>
+	<div class="inuit">
+		<img src="assets/images/fourteen-debug-config-inuit.jpg" width="" height="">
+	</div>
+	<div class="inuit no-label">
+		<img src="assets/images/fourteen-debug-inuit.jpg" width="" height="">
+	</div>
+
+	<br>
+	<br>
+
+	<div class="improved fragment" data-fragment-index="0">
+		<img src="assets/images/fourteen-improved.jpg" width="" height="">
+	</div>
+
 </section>
 
-		</section>
-		<section class="slide">
-			<h1>Type coercion.</h1>
 
 <aside class="notes">
 	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 </aside>
 
 		</section>
-		<section class="slide">
+		<section class="slide nineteen">
 			<section>
-	<h1>Use objects for configs.</h1>
+	<h1><span class="sol-yellow inline-block">8.</span> <span class="inline-block">Format your mixin parameters<br>so they are <em>easy</em> to read.</span></h1>
+</section>
+
+
+<section>
+	<h1 class="fragment" data-fragment-index="0">Format your mixin parameters<br>so they are <em>easy</em> to read.</h1>
+	<div class="mine-and-theirs--diagonal">
+		<div class="first mine">
+			<img src="assets/images/nineteen-mine.jpg" height="" width="">
+		</div>
+
+		<div class="second compass fragment" data-fragment-index="0">
+			<!--<div class="inuit">-->
+			<img src="assets/images/nineteen-compass.jpg" height="" width="700">
+		</div>
+	</div>
+</section>
+
+
+<aside class="notes">
+	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+</aside>
+
+		</section>
+		<section class="slide two">
+			<section>
+	<h1><span class="sol-yellow">9.</span> Safe-guard your arguments</h1>
+</section>
+
+
+<section>
+	<h1>.. check for empty arguments</h1>
+
+	<br>
+	<div class="toolkit">
+		<img src="assets/images/two-empty-params-toolkit.jpg" width="" height="">
+	</div>
 
 	<aside class="notes">
 		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 	</aside>
+</section>
+
+
+<section>
+	<h1>.. predefine <em>optional</em> arguments with <code>null</code></h1>
+
+	<br>
+	<div class="toolkit">
+		<img src="assets/images/two-null-toolkit.jpg" width="" height="">
+	</div>
+</section>
+
+
+<section>
+	<h1>.. idiot proof argument order</h1>
+
+	<br>
+	<div class="compass">
+		<img src="assets/images/two-idiot-compass.jpg" width="" height="">
+	</div>
+</section>
+
+
+		</section>
+		<section class="slide twenty">
+			<section>
+	<h1><span class="sol-yellow">10.</span> Throw errors.</h1>
 </section>
 
 <section>
-	<h1>Now you can access configs with getters and setters.</h1>
+	<h1>Throw errors.</h1>
 
-	<aside class="notes">
-		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-	</aside>
+	<div class="bourbon">
+		<img src="assets/images/twenty-bourbon.jpg" width="" height="">
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<div class="sassy-math fragment" data-fragment-index="0">
+		<img src="assets/images/twenty-sassy-math.jpg" width="" height="">
+	</div>
 </section>
 
 
 
-
-		</section>
-		<section class="slide">
-			<h1>Document inline.</h1>
 
 <aside class="notes">
 	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 </aside>
 
 		</section>
-		<section class="slide">
+		<section class="slide twenty-two">
 			<section>
+	<h1><span class="sol-yellow">10½. </span> Don't be too serious.</h1>
+</section>
+
+
+<section>
+	<h1>Don't be too serious.</h1>
+	<div class="caffeinated mine">
+		<img src="assets/images/twenty-two-caffeinatedlabs.jpg" height="" width="">
+	</div>
+	<!-- https://github.com/caffeinatedlabs/codeblog/blob/master/assets/craftstrap.sass -->
+</section>
+
+		</section>
+		<section class="slide twenty-one">
+			<h1>Read some Framework code.</h1>
+
+<address>
+	<p><a href="mailto:elise.chant@gmail.com">elise.chant@gmail.com</a></p>
+	<p><a href="http://twitter.com/elisechant">@elisechant</a></p>
+</address>
+
+		</section>
+
+
+
+		<!--<section class="slide">-->
+			<!--<h1>Type coercion.</h1>
+
+<aside class="notes">
+	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+</aside>
+-->
+		<!--</section>-->
+		<!--<section class="slide">-->
+			<!--<section>
 	<h1>Use <code>!important</code></h1>
 
 	<aside class="notes">
@@ -147,55 +477,18 @@
 		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 	</aside>
 </section>
-
-		</section>
-		<section class="slide">
-			<h1>Use element references.</h1>
-
-<aside class="notes">
-	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-</aside>
-
-		</section>
-		<section class="slide">
-			<h1>Grammar proof your selectors.</h1>
-
-<div class="stacked-pair">
-	<div class="mine">
-		<img src="assets/images/grammar--mine.png" height="300" width="640">
-	</div>
-	<div class="inuit">
-		<img src="assets/images/grammar--inuit.png" height="300" width="640">
-	</div>
-</div>
-
-
-<!--<div class="before-and-after">-->
-	<!--<div class="before">-->
-		<!--<img src="assets/images/grammar-proof-selectors--mine.png">-->
-	<!--</div>-->
-	<!--<div class="after">-->
-		<!--<img src="assets/images/grammar-proof-selectors--inuit.png">-->
-	<!--</div>-->
-<!--</div>-->
-
-
-<!--<div class="light-and-shade">-->
-	<!--<div class="light">-->
-		<!--<img src="assets/images/grammar-proof-selectors-2--mine.png">-->
-	<!--</div>-->
-	<!--<div class="shade">-->
-		<!--<img src="assets/images/grammar-proof-selectors-2--inuit.png">-->
-	<!--</div>-->
-<!--</div>-->
+-->
+		<!--</section>-->
+		<!--<section class="slide">-->
+			<!--<h1>Use element references.</h1>
 
 <aside class="notes">
 	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 </aside>
-
-		</section>
-		<section class="slide">
-			<section>
+-->
+		<!--</section>-->
+		<!--<section class="slide">-->
+			<!--<section>
 	<h1>Use Compass URL helpers</h1>
 
 	<div class="vertical-panels">
@@ -239,115 +532,56 @@
 		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 	</aside>
 </section>
-
-		</section>
-		<section class="slide">
-			<section>
-	<h1>Mixin libraries are cheap.</h1>
-
-	<aside class="notes">
-		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-	</aside>
-</section>
-
-
-<section>
-	<h1>Optionally output CSS.</h1>
-
-	<aside class="notes">
-		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-	</aside>
-</section>
-
-		</section>
-		<section class="slide">
-			<h1>Keep mixins DRY and extensible.</h1>
+-->
+		<!--</section>-->
+		<!--<section class="slide">-->
+			<!--<h1>Keep mixins DRY and extensible.</h1>
 
 <aside class="notes">
 	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 </aside>
-
-		</section>
-		<section class="slide">
-			<h1>Set globals conditionally.</h1>
-
-<aside class="notes">
-	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-</aside>
-
-		</section>
-		<section class="slide">
-			<h1>Support Web Components.</h1>
+-->
+		<!--</section>-->
+		<!--<section class="slide">-->
+			<!--<h1>Set globals conditionally.</h1>
 
 <aside class="notes">
 	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 </aside>
-
-		</section>
-		<section class="slide">
-			<h1>Use a debug flag.</h1>
-
-<aside class="notes">
-	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-</aside>
-
-		</section>
-		<section class="slide">
-			<h1>Use constants.</h1>
+-->
+		<!--</section>-->
+		<!--<section class="slide">-->
+			<!--<h1>Support Web Components.</h1>
 
 <aside class="notes">
 	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 </aside>
-
-		</section>
-		<section class="slide">
-			<h1>Use lots of Sass Partials.</h1>
-
-<aside class="notes">
-	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-</aside>
-
-		</section>
-		<section class="slide">
-			<h1>Pass compiled values to JavaScript.</h1>
+-->
+		<!--</section>-->
+		<!--<section class="slide">-->
+			<!--<h1>Use constants.</h1>
 
 <aside class="notes">
 	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 </aside>
-
-		</section>
-		<section class="slide">
-			<h1>Opinionate Module groupings</h1>
-
-<aside class="notes">
-	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-</aside>
-
-		</section>
-		<section class="slide">
-			<h1>Format your mixins so they are readable.</h1>
+-->
+		<!--</section>-->
+		<!--<section class="slide">-->
+			<!--<h1>Pass compiled values to JavaScript.</h1>
 
 <aside class="notes">
 	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 </aside>
-
-		</section>
-		<section class="slide">
-			<h1>Throw errors.</h1>
+-->
+		<!--</section>-->
+		<!--<section class="slide">-->
+			<!--<h1>Opinionate Module groupings</h1>
 
 <aside class="notes">
 	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 </aside>
-
-		</section>
-		<section class="slide">
-			<h1>Read the Framework code.</h1>
-		</section>
-		<section class="slide">
-			<h1>elise.chant@gmail.com</h1>
-<h1>@elisechant</h1>
-		</section>
-
+-->
+		<!--</section>-->
 	</div>
 </div>
 

@@ -1,4 +1,4 @@
-/*! things-ive-learned-from-sass-plugins Sunday, June 1st, 2014, 12:41:02 PM* Copyright (c) 2014 elisechant; */
+/*! things-ive-learned-from-sass-plugins Thursday, June 5th, 2014, 9:01:17 AM* Copyright (c) 2014 elisechant; */
 
 var SP = SP || (window.SP = {});
 

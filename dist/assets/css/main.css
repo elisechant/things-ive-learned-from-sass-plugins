@@ -67,9 +67,23 @@ body {
   user-select: none;
 }
 
-.slide {
-  border: 1px solid red;
+.sol-green {
+  color: #00afaf;
 }
+
+.sol-yellow {
+  color: #af8700;
+}
+
+.sol-grey {
+  color: #93a1a1;
+}
+
+.inline-block {
+  display: inline-block;
+  vertical-align: top !important;
+}
+
 .slide img {
   max-width: 100%;
 }
@@ -90,133 +104,299 @@ body {
   text-align: left;
   font-family: "Avenir";
   margin-bottom: 1em;
+  text-shadow: 1px 1px 1px #1c1c1c;
 }
 .slide h1 code {
   color: #af8700;
-}
-.slide .row {
-  display: table;
-}
-.slide .col {
-  display: table-cell;
-  vertical-align: top;
-  padding-right: 1em;
-}
-.slide .col:last-of-type {
-  padding-right: 0;
 }
 
 .progress {
   height: 5px;
 }
 .progress span {
-  background-color: #93a1a1;
+  background-color: #af8700;
 }
 
-.light-and-shade,
-.before-and-after {
+.bootstrap,
+.foundation,
+.inuit,
+.toolkit,
+.compass,
+.caffeinated,
+.sassy-math,
+.bourbon {
   position: relative;
-  height: 300px;
+  display: inline-block;
 }
-.light-and-shade img,
-.before-and-after img {
-  width: 100%;
-}
-.light-and-shade .light,
-.light-and-shade .shade,
-.light-and-shade .before,
-.light-and-shade .after,
-.before-and-after .light,
-.before-and-after .shade,
-.before-and-after .before,
-.before-and-after .after {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.light-and-shade .before,
-.before-and-after .before {
-  z-index: 2;
-}
-.light-and-shade .after,
-.before-and-after .after {
-  z-index: 1;
-}
-.light-and-shade .light,
-.before-and-after .light {
-  left: 0;
-  right: 50%;
-  padding-right: .5em;
-}
-.light-and-shade .shade,
-.before-and-after .shade {
-  left: 50%;
-  right: 0;
-  padding-left: .5em;
-}
-
-.stacked-pair {
-  position: relative;
-  height: 480px;
-  border: 1px solid red;
-}
-.stacked-pair .mine, .stacked-pair .bootstrap,
-.stacked-pair .foundation,
-.stacked-pair .inuit {
-  position: absolute;
-  width: 90%;
-  max-width: 90%;
-}
-.stacked-pair .mine {
-  top: 0;
-  left: 0;
-  text-align: left;
-}
-.stacked-pair .bootstrap,
-.stacked-pair .foundation,
-.stacked-pair .inuit {
-  bottom: 0;
-  right: 0;
-  text-align: right;
-}
-.stacked-pair .bootstrap img,
-.stacked-pair .foundation img,
-.stacked-pair .inuit img {
-  position: relative;
-  border: 4px solid;
-}
-.stacked-pair .bootstrap:before,
-.stacked-pair .foundation:before,
-.stacked-pair .inuit:before {
+.bootstrap:before,
+.foundation:before,
+.inuit:before,
+.toolkit:before,
+.compass:before,
+.caffeinated:before,
+.sassy-math:before,
+.bourbon:before {
   position: absolute;
   right: 16px;
   height: 24px;
-  top: -24px;
+  top: -25px;
   padding: 2px 6px;
   color: white;
 }
-.stacked-pair .foundation:before {
+.bootstrap.no-label:before,
+.foundation.no-label:before,
+.inuit.no-label:before,
+.toolkit.no-label:before,
+.compass.no-label:before,
+.caffeinated.no-label:before,
+.sassy-math.no-label:before,
+.bourbon.no-label:before {
+  display: none;
+}
+.bootstrap img,
+.foundation img,
+.inuit img,
+.toolkit img,
+.compass img,
+.caffeinated img,
+.sassy-math img,
+.bourbon img {
+  border: 4px solid;
+}
+
+.foundation:before {
   content: 'Foundation';
   background: #008cba;
 }
-.stacked-pair .foundation img {
+.foundation img {
   border-color: #008cba;
 }
-.stacked-pair .bootstrap:before {
+
+.bootstrap:before {
   content: 'Bootstrap';
   background: #6f5499;
 }
-.stacked-pair .bootstrap img {
+.bootstrap img {
   border-color: #6f5499;
 }
-.stacked-pair .inuit:before {
+
+.inuit:before {
   content: 'inuit.css';
   background: #4a8ec2;
 }
-.stacked-pair .inuit img {
+.inuit img {
   border-color: #4a8ec2;
 }
 
-.vertical-panels .panel {
-  margin-bottom: 2em;
+.toolkit:before {
+  content: 'Team Sass Toolkit';
+  background: #ff0065;
+}
+.toolkit img {
+  border-color: #ff0065;
+}
+
+.sassy-math:before {
+  content: 'Team Sass Sassy-math';
+  background: #ff0065;
+}
+.sassy-math img {
+  border-color: #ff0065;
+}
+
+.compass:before {
+  content: 'Compass';
+  background: #fb292d;
+}
+.compass img {
+  border-color: #fb292d;
+}
+
+.caffeinated:before {
+  content: 'Caffeinated Labs';
+  background: #ef4035;
+}
+.caffeinated img {
+  border-color: #ef4035;
+}
+
+.bourbon:before {
+  content: 'Bourbon';
+  background: #fc511d;
+}
+.bourbon img {
+  border-color: #fc511d;
+}
+
+.mine-and-theirs, .mine-and-theirs--diagonal {
+  position: relative;
+  min-height: 460px;
+}
+.mine-and-theirs .first, .mine-and-theirs--diagonal .first,
+.mine-and-theirs .second,
+.mine-and-theirs--diagonal .second {
+  position: absolute;
+  border-bottom: 1px solid #1c1c1c;
+  border-right: 1px solid #1c1c1c;
+}
+.mine-and-theirs .first, .mine-and-theirs--diagonal .first {
+  top: 0;
+  left: 0;
+}
+.mine-and-theirs .second, .mine-and-theirs--diagonal .second {
+  bottom: 0;
+  right: 0;
+}
+
+.side-by-side {
+  position: relative;
+}
+.side-by-side .side--right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.each-on-top-of {
+  position: relative;
+}
+.each-on-top-of .each {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.each-columns {
+  display: table;
+}
+.each-columns .each {
+  display: table-cell;
+  vertical-align: top;
+  padding: 0 .5em;
+}
+
+.each-columns--random {
+  display: block;
+  position: relative;
+  height: 600px !important;
+  border: 1px solid red;
+}
+.each-columns--random .each {
+  height: 600px !important;
+  position: absolute;
+}
+.each-columns--random .each.visible {
+  -webkit-animation: wobble 100ms linear;
+  animation: wobble 100ms linear;
+}
+.each-columns--random .each:nth-child(1) {
+  top: 10px;
+  left: 0;
+}
+.each-columns--random .each:nth-child(2) {
+  top: 30px;
+  left: 200px;
+  z-index: 2;
+}
+.each-columns--random .each:nth-child(3) {
+  top: 10px;
+  right: 0;
+}
+.each-columns--random .each:nth-child(4) {
+  top: 50px;
+  z-index: 2;
+}
+.each-columns--random .each:nth-child(5) {
+  top: 65px;
+  left: 300px;
+  z-index: 5;
+}
+.each-columns--random .each:nth-child(6) {
+  top: 40px;
+  left: 100px;
+  z-index: 4;
+}
+
+@-webkit-keyframes wobble {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  20% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes wobble {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  20% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+.eight .mine-and-theirs--diagonal {
+  min-height: 420px;
+}
+
+.one .mine-and-theirs--diagonal {
+  min-height: 470px;
+}
+
+.four .each-on-top-of {
+  min-height: 600px;
+}
+.four .each-on-top-of .each:last-of-type {
+  right: 3em;
+  bottom: -.5em;
+  left: auto;
+  top: auto;
+}
+
+.nineteen .mine-and-theirs--diagonal {
+  min-height: 420px;
+}
+.nineteen .compass {
+  right: 2em;
+}
+
+.twenty-one p {
+  text-align: left;
+  font-size: 30px;
+  font-family: "Avenir";
+  margin-bottom: .5em;
+}
+.twenty-one a {
+  color: #93a1a1;
+  text-shadow: 1px 1px 1px #1c1c1c;
+  text-decoration: none;
+}
+
+.sixteen .each {
+  min-height: 600px;
 }
