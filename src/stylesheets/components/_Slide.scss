@@ -51,10 +51,11 @@
 		position: absolute;
 		right: 16px;
 		height: 24px;
-		top: -24px;
+		top: -24px - 1px;
 		padding: 2px 6px;
 		color: white;
 	}
+
 
 	&.no-label:before {
 		display: none;
