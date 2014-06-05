@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>Things I&#x27;ve Learned From Sass Plugins</title>
+	<title>10 Things I&#x27;ve Learned From Sass Plugins</title>
 
 	<meta name="author" content="Elise Chant">
 
@@ -38,20 +38,27 @@
 <!--<img src="assets/images/ionic-logo.png">-->
 <!--<img src="assets/images/team-sass-logo.png">-->
 <!--<img src="assets/images/zurb-logo.png">-->
-
-
-<aside class="notes">
-	Thanks SydCSS for having me.<br>
-	Today I’d like to talk about Sass.<br>
-	In particular, I want to talk about some of the learnings that I’ve found useful from reading Framework Source code.
-</aside>
 		</section>
 		<section class="slide intro">
 			<img src="assets/images/css-grumpy-cat.jpg" width="" height="">
+
+<aside class="notes">
+	Developers historically don't like CSS<br>
+	But Preprocessors like Sass are a great opportunity for us to change the way people think about CSS<br>
+	<br>
+	And the best way to do that is to use more of the features of the Language<br>
+	And like all other languages, we should look in to the Source Code of our Plugins and Frameworks for best practices, tips and tricks<br>
+	<br>
+	And these are some that i've found.
+</aside>
 		</section>
 		<section class="slide eight">
 			<section>
 	<h1><span class="sol-yellow">1.</span> Grammar proof your selectors.</h1>
+
+	<aside class="notes">
+		1. Grammar proof your selectors
+	</aside>
 </section>
 
 <section>
@@ -66,19 +73,26 @@
 			<img src="assets/images/eight-inuit.jpg" width="638" height="286">
 		</div>
 	</div>
+
+	<aside class="notes">
+		We all know the pain of debugging typos in selectors<br>
+		This happens amazingly frequently!  particularly with strange words like 'grey'<br>
+		So, when you’re writing selectors,<strong style="color:green"> [NEXT]</strong><br>
+		<strong>Grammar proof your selectors ! like Inuit</strong><br>
+		And now it's ok if a developer misspells the 'gray' class
+	</aside>
 </section>
 
 
-<aside class="notes">
-	We should all know the pain of debugging typos in selectors? This is something that happens a lot !<br>
-	So, when you’re writing selectors,<br>
-	<strong>Grammar proof your selectors !</strong>
-</aside>
 
 		</section>
 		<section class="slide one">
 			<section>
-	<h1><span class="sol-yellow">2.</span> Chain your import statements.</h1>
+	<h1><span class="sol-yellow">2.</span> You can chain import statements.</h1>
+
+	<aside class="notes">
+		2.  You can chain import statements.
+	</aside>
 </section>
 
 <section>
@@ -101,19 +115,23 @@
 			<img src="assets/images/one-foundation.jpg" height="" width="800">
 		</div>
 	</div>
+
+
+	<aside class="notes">
+		Something always felt wrong about repeating the @import directive.<strong  style="color:green"> [NEXT]</strong><br>
+		We chain JavaScript variables, so why can't we chain import statements? <strong  style="color:green"> [NEXT]</strong><br>
+		well it turns out <strong>you can chain import statements !</strong>, Foundation do this<br>
+	</aside>
 </section>
-
-
-<aside class="notes">
-	It’s less annoying, but something always feels wrong about repeating the @import directive. It feels much more natural to chain the import, like chaining JavaScript variables,<br>
-	well it turns out you can,<br>
-	<strong>Chain import statements !</strong>
-</aside>
 
 		</section>
 		<section class="slide four">
 			<section>
 	<h1><span class="sol-yellow">3.</span> Use objects for configs.</h1>
+
+	<aside class="notes">
+		3. Use objects for configs.
+	</aside>
 </section>
 
 <section>
@@ -131,28 +149,39 @@
 
 
 	<aside class="notes">
-		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+		Another thing that annoyed me about Sass<br>
+		was the unorganised key-value mess that the config file becomes<br>
+		<br>
+		I wanted to write Sass configs with an Object syntax like we might do in JavaScript <br>
+		<br>
+		Well <strong><u>you can</u> use objects for configs like Toolkit do</strong> <strong  style="color:green"> [NEXT]</strong><br>
+		in Sass 3.3 we have maps, which are Objects.<br>
+		And now that our config is an Object <strong  style="color:green"> [NEXT]</strong><br>
 	</aside>
+
+
+
 </section>
 
 <section>
 	<h1>Access the config object with getters and setters.</h1>
-
+	<br>
 	<div class="toolkit">
 		<img src="assets/images/four-2-config-item-toolkit.jpg" height="" width="">
 	</div>
 	<br>
-	<div class="toolkit">
+	<br>
+	<div class="toolkit no-label">
 		<img src="assets/images/four-2-getters-toolkit.jpg" height="" width="">
 	</div>
 	<br>
-	<div class="toolkit">
+	<br>
+	<div class="toolkit no-label">
 		<img src="assets/images/four-2-use-getter-toolkit.jpg" height="" width="">
 	</div>
 
-
 	<aside class="notes">
-		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+		we can create getter and setter methods to read and write to them just like Toolkit do<br>
 	</aside>
 </section>
 
@@ -163,10 +192,15 @@
 		<section class="slide sixteen">
 			<section>
 	<h1><span class="sol-yellow">4.</span> Use lots of Sass Partials.</h1>
+
+	<aside class="notes">
+		4. Use lots of Sass Partials.<br>
+		This is something that goes without saying. But so many developers just don't do this.
+	</aside>
 </section>
 
 <section>
-	<h1 class="fragment" data-fragment-index="5">Use lots of Sass Partials.</h1>
+	<h1 class="fragment" data-fragment-index="3">Use lots of Sass Partials.</h1>
 
 	<div class="each-columns--random">
 
@@ -178,34 +212,43 @@
 			<img src="assets/images/sixteen-bootstrap.jpg" height="515" width="310">
 		</div>
 
-		<div class="each inuit fragment" data-fragment-index="2">
-			<img src="assets/images/sixteen-inuit.jpg" height="515" width="310">
+		<div class="each compass fragment" data-fragment-index="2">
+			<img src="assets/images/sixteen-compass.jpg" height="515" width="310">
 		</div>
 
 		<div class="each bourbon fragment" data-fragment-index="3">
 			<img src="assets/images/sixteen-bourbon.jpg" height="515" width="310">
 		</div>
 
-		<div class="each compass fragment" data-fragment-index="5">
-			<img src="assets/images/sixteen-compass.jpg" height="515" width="310">
+		<div class="each inuit fragment" data-fragment-index="3">
+			<img src="assets/images/sixteen-inuit.jpg" height="515" width="310">
 		</div>
 
-		<div class="each toolkit fragment" data-fragment-index="4">
+		<div class="each toolkit fragment" data-fragment-index="3">
 			<img src="assets/images/sixteen-toolkit.jpg" height="515" width="310">
 		</div>
 
 	</div>
 
-</section>
 
-<aside class="notes">
-	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-</aside>
+	<aside class="notes">
+		Foundation do<strong  style="color:green"> [NEXT]</strong><br>
+		Bootstrap do<strong  style="color:green"> [NEXT]</strong><br>
+		Compass does<strong  style="color:green"> [NEXT]</strong><br>
+		Actually everyone does, so we should too<strong  style="color:green"> [NEXT]</strong><br>
+	</aside>
+
+</section>
 
 		</section>
 		<section class="slide five">
 			<section>
 	<h1><span class="sol-yellow">5.</span> Document inline.</h1>
+
+	<aside class="notes">
+		5. Document inline<br>
+		And as our code gets more complex, this is more and more important<br>
+	</aside>
 </section>
 
 
@@ -223,6 +266,12 @@
 	<div class="mine fragment" data-fragment-index="1">
 		<img src="assets/images/five-bad-comments-element-group-mine.jpg" width="" height="">
 	</div>
+
+	<aside class="notes">
+		CSS is notorious for comments that point out the obvious<strong  style="color:green"> [NEXT]</strong><br>
+		or a general lack of commenting and bad naming conventions<strong  style="color:green"> [NEXT]</strong><br>
+		or comments that are starting to be helpful but don't convey any semantics<strong  style="color:green"> [NEXT]</strong><br>
+	</aside>
 </section>
 
 
@@ -230,28 +279,44 @@
 	<div class="bootstrap">
 		<img src="assets/images/five-variables-bootstrap.jpg" width="" height="">
 	</div>
+
+	<aside class="notes">
+		Bootstrap have <em>particularly</em> good commenting<br>
+		They explain things that we need to know like the value IS <em>intentionally unitless</em><br>
+		and how the values was evaluated
+	</aside>
 </section>
 
 <section>
 	<div class="inuit">
 		<img src="assets/images/five-forms-inuit.jpg" width="" height="">
 	</div>
+
+	<aside class="notes">
+		Inuit use html snippets in their doc-blocks to explain some of the semantics of classes
+	</aside>
 </section>
 
 <section>
 	<div class="inuit">
 		<img src="assets/images/five-arrows-inuit.jpg" width="" height="">
 	</div>
+
+	<aside class="notes">
+		Inuit also draws pictures to convey useful information<br>
+		so we should too
+	</aside>
 </section>
-
-<aside class="notes">
-
-</aside>
 
 		</section>
 		<section class="slide ten">
 			<section>
 	<h1><span class="sol-yellow">6.</span> Mixin libraries are cheap</h1>
+
+	<aside class="notes">
+		One that took me a while to figure out<br>
+		<strong>Mixin libraries are cheap!</strong>
+	</aside>
 </section>
 
 <section>
@@ -260,13 +325,19 @@
 	</div>
 
 	<aside class="notes">
-		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+		They don't output any CSS. <br>
+		So you can have as many Mixins as you like <br>
+		and unless you use them they won't have an impact on performance
 	</aside>
 </section>
 
 
 <section>
 	<h1>.. or optionally output CSS</h1>
+
+	<aside class="notes">
+		Or some Frameworks like Foundation provide this as an option
+	</aside>
 </section>
 
 
@@ -276,7 +347,7 @@
 	</div>
 
 	<aside class="notes">
-		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+		They use a simple Boolean switch called "include-html" so the developer can control the output
 	</aside>
 </section>
 
@@ -284,6 +355,10 @@
 		<section class="slide fourteen">
 			<section>
 	<h1><span class="sol-yellow">7.</span> Use a debug flag.</h1>
+
+	<aside class="notes">
+		7. Use a debug flag.
+	</aside>
 </section>
 
 <section>
@@ -303,17 +378,27 @@
 		<img src="assets/images/fourteen-improved.jpg" width="" height="">
 	</div>
 
+	<aside class="notes">
+		Inuit a variable called $debug-mode and by setting this to true,<br>
+		It executes the contents of a file called debug<br>
+		the file is used to paint useful things in browser like outlining elements without alt tags<br>
+		<br>
+		<br>
+		So we could use a debug concept in our code as well<strong  style="color:green"> [NEXT]</strong>
+		Maybe it would be a useful way of debugging layout elements<br>
+		You could use it in a ternary function for example
+	</aside>
+
 </section>
-
-
-<aside class="notes">
-	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-</aside>
 
 		</section>
 		<section class="slide nineteen">
 			<section>
 	<h1><span class="sol-yellow inline-block">8.</span> <span class="inline-block">Format your mixin parameters<br>so they are <em>easy</em> to read.</span></h1>
+
+	<aside class="notes">
+		8. Format your mixin parameters so they are easy to read.
+	</aside>
 </section>
 
 
@@ -329,17 +414,24 @@
 			<img src="assets/images/nineteen-compass.jpg" height="" width="700">
 		</div>
 	</div>
+
+	<aside class="notes">
+		Don't write mixin parameters on one line<br>
+		and use plenty of space between them <strong  style="color:green"> [NEXT]</strong><br>
+		so people can quickly read them<br>
+		like Compass do.
+	</aside>
 </section>
-
-
-<aside class="notes">
-	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-</aside>
 
 		</section>
 		<section class="slide two">
 			<section>
-	<h1><span class="sol-yellow">9.</span> Safe-guard your arguments</h1>
+	<h1><span class="sol-yellow">9.</span> Guard arguments</h1>
+
+	<aside class="notes">
+		If you code is going to be reusable, you need to be <br>
+		Guarding your arguments
+	</aside>
 </section>
 
 
@@ -352,7 +444,8 @@
 	</div>
 
 	<aside class="notes">
-		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+		you can check for empty arguments with the length function like Toolkit do,<br>
+		then you might do something like setting a default value for this condition or emitting a warning
 	</aside>
 </section>
 
@@ -364,16 +457,29 @@
 	<div class="toolkit">
 		<img src="assets/images/two-null-toolkit.jpg" width="" height="">
 	</div>
+
+	<aside class="notes">
+		Predefine optional arguments with null<br>
+		this could be a good way of turning off a feature in your mixin
+	</aside>
 </section>
 
 
 <section>
-	<h1>.. idiot proof argument order</h1>
+	<h1>.. guard the argument order</h1>
 
 	<br>
 	<div class="compass">
 		<img src="assets/images/two-idiot-compass.jpg" width="" height="">
 	</div>
+
+	<aside class="notes">
+		Guard the argument order like Compass do<br>
+		<br>
+		And the point is that there are many logic controls <br>
+		that we have available to us<br>
+		so <u>we should</u> use them more
+	</aside>
 </section>
 
 
@@ -381,6 +487,10 @@
 		<section class="slide twenty">
 			<section>
 	<h1><span class="sol-yellow">10.</span> Throw errors.</h1>
+
+	<aside class="notes">
+		10. Throw errors
+	</aside>
 </section>
 
 <section>
@@ -397,28 +507,44 @@
 	<div class="sassy-math fragment" data-fragment-index="0">
 		<img src="assets/images/twenty-sassy-math.jpg" width="" height="">
 	</div>
+
+	<aside class="notes">
+		Bourbon use errors to give deprecating warnings<br><br>
+		Sassy-math use errors to emit type warnings <br>
+		and then use a @return false to exit the function.
+	</aside>
+
 </section>
-
-
-
-
-<aside class="notes">
-	Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-</aside>
 
 		</section>
 		<section class="slide twenty-two">
 			<section>
 	<h1><span class="sol-yellow">10½. </span> Don't be too serious.</h1>
+
+	<aside class="notes">
+		10 and a half. Dont be too serious.
+	</aside>
 </section>
 
 
 <section>
-	<h1>Don't be too serious.</h1>
-	<div class="caffeinated mine">
-		<img src="assets/images/twenty-two-caffeinatedlabs.jpg" height="" width="">
+
+	<div class="mine-and-theirs--diagonal">
+		<div class="first caffeinated">
+			<img src="assets/images/twenty-two-caffeinatedlabs.jpg" height="" width="800">
+			<!-- https://github.com/caffeinatedlabs/codeblog/blob/master/assets/craftstrap.sass -->
+		</div>
+
+		<div class="second fragment" data-fragment-index="1">
+			<img src="assets/images/twenty-two-mine.jpg" height="" width="750">
+		</div>
 	</div>
-	<!-- https://github.com/caffeinatedlabs/codeblog/blob/master/assets/craftstrap.sass -->
+
+
+	<aside class="notes">
+		At the end of the day, we're CSS devs and we still like to have fun<strong style="color:green"> [NEXT]</strong><br><br>
+		And remember that most things get stripped out in the compile so you probably wont get fired.
+	</aside>
 </section>
 
 		</section>
@@ -430,6 +556,10 @@
 	<p><a href="http://twitter.com/elisechant">@elisechant</a></p>
 </address>
 
+
+<aside class="notes">
+	Ok, thanks very much.
+</aside>
 		</section>
 
 
