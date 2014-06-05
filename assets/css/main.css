@@ -1,0 +1,406 @@
+/* BASELINE
+|--------------------------------------------------------------------------
+|
+| Units of measurement guidelines:
+|
+| PIXELS        : hairline borders, css shadows,
+| EM            : media queries, typography, elements related to typography like margins
+| REM           : don't use, no IE8 support     (ideally, would use rems for type, with em fallbacks)
+| PERCENTAGE    : base resets, responsive images, layout, containers    (you do not know where your module is going on a page, so you don't know its absolute size)
+| RAW           : line-heights, border-image    (unitless, so the line height is a multiple of the current element's font-size)
+|
+*/
+/* FONT IMPORTS
+|--------------------------------------------------------------------------
+*/
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/proximanova-regular-webfont.eot");
+  src: url("../fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-regular-webfont.woff") format("woff"), url("../fonts/proximanova-regular-webfont.ttf") format("truetype"), url("../fonts/proximanova-regular-webfont.svg#proximanova-regular-webfont") format("svg");
+}
+@font-face {
+  font-family: "Proxima Nova Bold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/proximanova-bold-webfont.eot");
+  src: url("../fonts/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-bold-webfont.woff") format("woff"), url("../fonts/proximanova-bold-webfont.ttf") format("truetype"), url("../fonts/proximanova-bold-webfont.svg#proximanova-bold-webfont") format("svg");
+}
+@font-face {
+  font-family: "Avenir";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Avenir 65 W01 Medium.eot");
+  src: url("../fonts/Avenir 65 W01 Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir 65 W01 Medium.woff") format("woff"), url("../fonts/Avenir 65 W01 Medium.ttf") format("truetype"), url("../fonts/Avenir 65 W01 Medium.svg#Avenir 65 W01 Medium") format("svg");
+}
+@font-face {
+  font-family: "Avenir Bold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Avenir 95 W01 Black.eot");
+  src: url("../fonts/Avenir 95 W01 Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir 95 W01 Black.woff") format("woff"), url("../fonts/Avenir 95 W01 Black.ttf") format("truetype"), url("../fonts/Avenir 95 W01 Black.svg#Avenir 95 W01 Black") format("svg");
+}
+/* COLORS
+|--------------------------------------------------------------------------
+*/
+/*
+ * This file is reserved for your global style rules.
+ */
+html {
+  height: 100%;
+  font-family: 'Gotham Light', 'Proxima Nova', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 16px;
+  fill: currentColor;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #252530;
+}
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sol-green {
+  color: #00afaf;
+}
+
+.sol-yellow {
+  color: #af8700;
+}
+
+.sol-grey {
+  color: #93a1a1;
+}
+
+.inline-block {
+  display: inline-block;
+  vertical-align: top !important;
+}
+
+.slide img {
+  max-width: 100%;
+}
+.slide .jumbo-text {
+  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 120px;
+  letter-spacing: 1px;
+  font-family: "Avenir Bold";
+  line-height: 1.2;
+  margin-bottom: 0;
+  text-align: center;
+}
+.slide h1 {
+  font-size: 40px;
+  color: white;
+  text-align: left;
+  font-family: "Avenir";
+  margin-bottom: 1em;
+  text-shadow: 1px 1px 1px #1c1c1c;
+}
+.slide h1 code {
+  color: #af8700;
+}
+
+.progress {
+  height: 5px;
+}
+.progress span {
+  background-color: #af8700;
+}
+
+.bootstrap,
+.foundation,
+.inuit,
+.toolkit,
+.compass,
+.caffeinated,
+.sassy-math,
+.bourbon {
+  position: relative;
+  display: inline-block;
+}
+.bootstrap:before,
+.foundation:before,
+.inuit:before,
+.toolkit:before,
+.compass:before,
+.caffeinated:before,
+.sassy-math:before,
+.bourbon:before {
+  position: absolute;
+  right: 16px;
+  height: 24px;
+  top: -25px;
+  padding: 2px 6px;
+  color: white;
+}
+.bootstrap.no-label:before,
+.foundation.no-label:before,
+.inuit.no-label:before,
+.toolkit.no-label:before,
+.compass.no-label:before,
+.caffeinated.no-label:before,
+.sassy-math.no-label:before,
+.bourbon.no-label:before {
+  display: none;
+}
+.bootstrap img,
+.foundation img,
+.inuit img,
+.toolkit img,
+.compass img,
+.caffeinated img,
+.sassy-math img,
+.bourbon img {
+  border: 4px solid;
+}
+
+.foundation:before {
+  content: 'Foundation';
+  background: #008cba;
+}
+.foundation img {
+  border-color: #008cba;
+}
+
+.bootstrap:before {
+  content: 'Bootstrap';
+  background: #6f5499;
+}
+.bootstrap img {
+  border-color: #6f5499;
+}
+
+.inuit:before {
+  content: 'inuit.css';
+  background: #4a8ec2;
+}
+.inuit img {
+  border-color: #4a8ec2;
+}
+
+.toolkit:before {
+  content: 'Team Sass Toolkit';
+  background: #ff0065;
+}
+.toolkit img {
+  border-color: #ff0065;
+}
+
+.sassy-math:before {
+  content: 'Team Sass Sassy-math';
+  background: #ff0065;
+}
+.sassy-math img {
+  border-color: #ff0065;
+}
+
+.compass:before {
+  content: 'Compass';
+  background: #fb292d;
+}
+.compass img {
+  border-color: #fb292d;
+}
+
+.caffeinated:before {
+  content: 'Caffeinated Labs';
+  background: #ef4035;
+}
+.caffeinated img {
+  border-color: #ef4035;
+}
+
+.bourbon:before {
+  content: 'Bourbon';
+  background: #fc511d;
+}
+.bourbon img {
+  border-color: #fc511d;
+}
+
+.mine-and-theirs, .mine-and-theirs--diagonal {
+  position: relative;
+  min-height: 460px;
+}
+.mine-and-theirs .first, .mine-and-theirs--diagonal .first,
+.mine-and-theirs .second,
+.mine-and-theirs--diagonal .second {
+  position: absolute;
+  border-bottom: 1px solid #1c1c1c;
+  border-right: 1px solid #1c1c1c;
+}
+.mine-and-theirs .first, .mine-and-theirs--diagonal .first {
+  top: 0;
+  left: 0;
+}
+.mine-and-theirs .second, .mine-and-theirs--diagonal .second {
+  bottom: 0;
+  right: 0;
+}
+
+.side-by-side {
+  position: relative;
+}
+.side-by-side .side--right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.each-on-top-of {
+  position: relative;
+}
+.each-on-top-of .each {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.each-columns {
+  display: table;
+}
+.each-columns .each {
+  display: table-cell;
+  vertical-align: top;
+  padding: 0 .5em;
+}
+
+.each-columns--random {
+  display: block;
+  position: relative;
+  height: 600px !important;
+  border: 1px solid red;
+}
+.each-columns--random .each {
+  height: 600px !important;
+  position: absolute;
+}
+.each-columns--random .each.visible {
+  -webkit-animation: wobble 100ms linear;
+  animation: wobble 100ms linear;
+}
+.each-columns--random .each:nth-child(1) {
+  top: 10px;
+  left: 0;
+}
+.each-columns--random .each:nth-child(2) {
+  top: 30px;
+  left: 200px;
+  z-index: 2;
+}
+.each-columns--random .each:nth-child(3) {
+  top: 10px;
+  right: 0;
+}
+.each-columns--random .each:nth-child(4) {
+  top: 50px;
+  z-index: 2;
+}
+.each-columns--random .each:nth-child(5) {
+  top: 65px;
+  left: 300px;
+  z-index: 5;
+}
+.each-columns--random .each:nth-child(6) {
+  top: 40px;
+  left: 100px;
+  z-index: 4;
+}
+
+@-webkit-keyframes wobble {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  20% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes wobble {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  20% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+.eight .mine-and-theirs--diagonal {
+  min-height: 420px;
+}
+
+.one .mine-and-theirs--diagonal {
+  min-height: 470px;
+}
+
+.four .each-on-top-of {
+  min-height: 600px;
+}
+.four .each-on-top-of .each:last-of-type {
+  right: 3em;
+  bottom: -.5em;
+  left: auto;
+  top: auto;
+}
+
+.nineteen .mine-and-theirs--diagonal {
+  min-height: 420px;
+}
+.nineteen .compass {
+  right: 2em;
+}
+
+.twenty-one p {
+  text-align: left;
+  font-size: 30px;
+  font-family: "Avenir";
+  margin-bottom: .5em;
+}
+.twenty-one a {
+  color: #93a1a1;
+  text-shadow: 1px 1px 1px #1c1c1c;
+  text-decoration: none;
+}
+
+.sixteen .each {
+  min-height: 600px;
+}
+
+.twenty-two .mine-and-theirs--diagonal {
+  min-height: 470px;
+}
