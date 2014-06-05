@@ -400,3 +400,7 @@ body {
 .sixteen .each {
   min-height: 600px;
 }
+
+.twenty-two .mine-and-theirs--diagonal {
+  min-height: 470px;
+}
