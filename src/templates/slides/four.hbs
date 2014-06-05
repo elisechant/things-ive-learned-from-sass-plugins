@@ -1,5 +1,9 @@
 <section>
 	<h1><span class="sol-yellow">3.</span> Use objects for configs.</h1>
+
+	<aside class="notes">
+		3. Use objects for configs.
+	</aside>
 </section>
 
 <section>
@@ -17,28 +21,40 @@
 
 
 	<aside class="notes">
-		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+		Another thing that annoyed me about Sass was the unorganised key value mess that the config.scss file becomes<br>
+		This is especially annoying if you want to use helper functions inside your config file, but they're not defined yet.<br>
+		I wanted to write Sass configs with an Object like how we might do in JavaScript <br>
+
+		Well in Sass 3.3 you can <strong>NEXT</strong>. We have now have maps, which are Objects.<br>
+		This is how Toolkit define their config settings<br>
+		And now that we’ve got an Object to organise the configuration values, <strong>NEXT</strong><br>
 	</aside>
+
+
+
 </section>
 
 <section>
 	<h1>Access the config object with getters and setters.</h1>
-
+	<br>
 	<div class="toolkit">
 		<img src="{{ SP.DIR_IMAGES }}/four-2-config-item-toolkit.jpg" height="" width="">
 	</div>
 	<br>
-	<div class="toolkit">
+	<br>
+	<div class="toolkit no-label">
 		<img src="{{ SP.DIR_IMAGES }}/four-2-getters-toolkit.jpg" height="" width="">
 	</div>
 	<br>
-	<div class="toolkit">
+	<br>
+	<div class="toolkit no-label">
 		<img src="{{ SP.DIR_IMAGES }}/four-2-use-getter-toolkit.jpg" height="" width="">
 	</div>
 
-
 	<aside class="notes">
-		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+		we can create getter and setter methods to read and write to them<br>
+		This just feels much better<br>
+		and now we have a handle to that action, so we can customise the get and set methods however we like
 	</aside>
 </section>
 
